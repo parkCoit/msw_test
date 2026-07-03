@@ -49,7 +49,7 @@
                   {
                     "Length": 1.27999973,
                     "NextFootholdId": 2,
-                    "PreviousFootholdId": 27,
+                    "PreviousFootholdId": 35,
                     "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
@@ -854,7 +854,7 @@
                   },
                   {
                     "Length": 0.859999955,
-                    "NextFootholdId": 1,
+                    "NextFootholdId": 35,
                     "PreviousFootholdId": 28,
                     "groupID": 1,
                     "layer": 1,
@@ -871,11 +871,11 @@
                     "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
                     "Id": 27,
                     "StartPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -0.9
                     },
                     "EndPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -0.04000002
                     },
                     "Variance": {
@@ -902,11 +902,11 @@
                     "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
                     "Id": 28,
                     "StartPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -1.50000012
                     },
                     "EndPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -0.9000001
                     },
                     "Variance": {
@@ -933,11 +933,11 @@
                     "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
                     "Id": 29,
                     "StartPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -2.10000014
                     },
                     "EndPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -1.50000012
                     },
                     "Variance": {
@@ -964,11 +964,11 @@
                     "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
                     "Id": 30,
                     "StartPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -2.7
                     },
                     "EndPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -2.10000014
                     },
                     "Variance": {
@@ -995,11 +995,11 @@
                     "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
                     "Id": 31,
                     "StartPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -3.30000019
                     },
                     "EndPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -2.70000029
                     },
                     "Variance": {
@@ -1026,11 +1026,11 @@
                     "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
                     "Id": 32,
                     "StartPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -3.9
                     },
                     "EndPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -3.30000019
                     },
                     "Variance": {
@@ -1057,11 +1057,11 @@
                     "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
                     "Id": 33,
                     "StartPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -4.50000048
                     },
                     "EndPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -3.90000033
                     },
                     "Variance": {
@@ -1088,16 +1088,47 @@
                     "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
                     "Id": 34,
                     "StartPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -5.10000038
                     },
                     "EndPoint": {
-                      "x": -8.93,
+                      "x": -16.8,
                       "y": -4.5
                     },
                     "Variance": {
                       "x": 0,
                       "y": 1
+                    }
+                  },
+                  {
+                    "Length": 7.87,
+                    "NextFootholdId": 1,
+                    "PreviousFootholdId": 27,
+                    "groupID": 1,
+                    "layer": 1,
+                    "sortingLayerName": "MapLayer0",
+                    "attribute": {
+                      "walk": 1,
+                      "force": 0,
+                      "drag": 1,
+                      "isBlockVertical": false,
+                      "isDynamic": false,
+                      "isCustomFoothold": false,
+                      "inertiaOption": 0
+                    },
+                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
+                    "Id": 35,
+                    "StartPoint": {
+                      "x": -16.8,
+                      "y": -0.04000002
+                    },
+                    "EndPoint": {
+                      "x": -8.93,
+                      "y": -0.04000002
+                    },
+                    "Variance": {
+                      "x": 1,
+                      "y": 0
                     }
                   }
                 ]
@@ -6356,473 +6387,17 @@
         }
       },
       {
-        "id": "2da3fe39-a00f-48df-b9a9-9a01f5009b30",
-        "path": "/maps/map01/StaticMonsterTemplate",
-        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.DamageSkinSettingComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,MOD.Core.StateComponent,MOD.Core.RigidbodyComponent,MOD.Core.KinematicbodyComponent,MOD.Core.SideviewbodyComponent,MOD.Core.MovementComponent,script.Monster,script.MonsterAttack",
-        "jsonString": {
-          "name": "StaticMonsterTemplate",
-          "path": "/maps/map01/StaticMonsterTemplate",
-          "nameEditable": true,
-          "enable": true,
-          "visible": true,
-          "localize": false,
-          "displayOrder": 4,
-          "pathConstraints": "///",
-          "revision": 1,
-          "origin": {
-            "type": "Model",
-            "entry_id": "StaticMonster",
-            "sub_entity_id": null,
-            "root_entity_id": "2da3fe39-a00f-48df-b9a9-9a01f5009b30",
-            "replaced_model_id": null
-          },
-          "modelId": "staticmonster",
-          "@components": [
-            {
-              "@type": "MOD.Core.TransformComponent",
-              "Position": {
-                "x": 1.61286092,
-                "y": 0.03499998,
-                "z": 999.999
-              },
-              "QuaternionRotation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
-              },
-              "Scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.StateAnimationComponent",
-              "ActionSheet": {
-                "stand": "4b1d55e35ae9462b944297691025429a",
-                "hit": "35c14328c2a6446eb5464dc85c39ab56",
-                "die": "770cfcbab36448999137d25e8ace707e"
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.SpriteRendererComponent",
-              "ActionSheet": {},
-              "EndFrameIndex": 0,
-              "RenderSetting": 1,
-              "SortingLayer": "MapLayer0",
-              "SpriteRUID": "6c7130f51a654803a1c39cbe30e2f427",
-              "StartFrameIndex": 0,
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.DamageSkinSettingComponent",
-              "DamageSkinId": {
-                "DataId": "02c22d93421b4038b3c413b3e40b57ec"
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.HitComponent",
-              "BoxSize": {
-                "x": 0.78,
-                "y": 0.86
-              },
-              "ColliderOffset": {
-                "x": 0.03999999,
-                "y": 0.43
-              },
-              "CollisionGroup": {
-                "Id": "8992acd1e8cd45838db6f10a7b41df09"
-              },
-              "IsLegacy": false,
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.DamageSkinSpawnerComponent",
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.StateComponent",
-              "IsLegacy": false,
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.RigidbodyComponent",
-              "MoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "RealMoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.KinematicbodyComponent",
-              "MoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.SideviewbodyComponent",
-              "MoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.MovementComponent",
-              "Enable": true
-            },
-            {
-              "@type": "script.Monster",
-              "Enable": true,
-              "IsDead": false
-            },
-            {
-              "@type": "script.MonsterAttack",
-              "Enable": true,
-              "SpriteSize": {
-                "x": 0,
-                "y": 0
-              },
-              "PositionOffset": {
-                "x": 0,
-                "y": 0
-              }
-            }
-          ],
-          "@version": 1
-        }
-      },
-      {
-        "id": "03928039-6972-4aec-bb07-64aea430561e",
-        "path": "/maps/map01/MoveMonsterTemplate",
-        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.RigidbodyComponent,MOD.Core.MovementComponent,MOD.Core.AIWanderComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack,MOD.Core.KinematicbodyComponent,MOD.Core.SideviewbodyComponent,MOD.Core.DamageSkinSettingComponent",
-        "jsonString": {
-          "name": "MoveMonsterTemplate",
-          "path": "/maps/map01/MoveMonsterTemplate",
-          "nameEditable": true,
-          "enable": true,
-          "visible": true,
-          "localize": false,
-          "displayOrder": 5,
-          "pathConstraints": "///",
-          "revision": 1,
-          "origin": {
-            "type": "Model",
-            "entry_id": "MoveMonster",
-            "sub_entity_id": null,
-            "root_entity_id": "03928039-6972-4aec-bb07-64aea430561e",
-            "replaced_model_id": null
-          },
-          "modelId": "movemonster",
-          "@components": [
-            {
-              "@type": "MOD.Core.TransformComponent",
-              "Position": {
-                "x": 4.451673,
-                "y": 0.03499998,
-                "z": 999.999
-              },
-              "QuaternionRotation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
-              },
-              "Scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.StateAnimationComponent",
-              "ActionSheet": {
-                "move": "969f52dd34934009b5c687af97c8435b",
-                "stand": "3e76c89ae8e7477ca871f5bbcd6f6f29",
-                "attack": "44b6336ac84a4091a9adb5f0aa0c02b7",
-                "attack2": "3c66552bd7ff48f98482e417be3e3772",
-                "attack3": "20d46f5a9b9641e0b3703dc95ac5fbc2",
-                "skill": "022d41ea8ce247639fd4f0fa83563c96",
-                "hit": "0bcbc0ec869245d4a454e00d635fc64d",
-                "die": "4e38904690784278a50fa378086b65a7"
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.SpriteRendererComponent",
-              "ActionSheet": {},
-              "EndFrameIndex": 0,
-              "RenderSetting": 1,
-              "SortingLayer": "MapLayer0",
-              "SpriteRUID": "3e76c89ae8e7477ca871f5bbcd6f6f29",
-              "StartFrameIndex": 0,
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.RigidbodyComponent",
-              "MoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "RealMoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.MovementComponent",
-              "InputSpeed": 1,
-              "JumpForce": 0,
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.AIWanderComponent",
-              "IsLegacy": false,
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.StateComponent",
-              "IsLegacy": false,
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.HitComponent",
-              "BoxSize": {
-                "x": 1.6,
-                "y": 1.56
-              },
-              "ColliderOffset": {
-                "x": 0,
-                "y": 0.78
-              },
-              "IsLegacy": false,
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.DamageSkinSpawnerComponent",
-              "Enable": true
-            },
-            {
-              "@type": "script.Monster",
-              "Enable": true,
-              "IsDead": false
-            },
-            {
-              "@type": "script.MonsterAttack",
-              "Enable": true,
-              "SpriteSize": {
-                "x": 0,
-                "y": 0
-              },
-              "PositionOffset": {
-                "x": 0,
-                "y": 0
-              }
-            },
-            {
-              "@type": "MOD.Core.KinematicbodyComponent",
-              "MoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.SideviewbodyComponent",
-              "MoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.DamageSkinSettingComponent",
-              "DamageSkinId": {
-                "DataId": "02c22d93421b4038b3c413b3e40b57ec"
-              },
-              "Enable": true
-            }
-          ],
-          "@version": 1
-        }
-      },
-      {
-        "id": "595374e9-e49a-4733-b00f-77e8e61dad59",
-        "path": "/maps/map01/ChaseMonsterTemplate",
-        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.RigidbodyComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack,MOD.Core.KinematicbodyComponent,MOD.Core.SideviewbodyComponent,MOD.Core.DamageSkinSettingComponent",
-        "jsonString": {
-          "name": "ChaseMonsterTemplate",
-          "path": "/maps/map01/ChaseMonsterTemplate",
-          "nameEditable": true,
-          "enable": true,
-          "visible": true,
-          "localize": false,
-          "displayOrder": 6,
-          "pathConstraints": "///",
-          "revision": 1,
-          "origin": {
-            "type": "Model",
-            "entry_id": "ChaseMonster",
-            "sub_entity_id": null,
-            "root_entity_id": "595374e9-e49a-4733-b00f-77e8e61dad59",
-            "replaced_model_id": null
-          },
-          "modelId": "chasemonster",
-          "@components": [
-            {
-              "@type": "MOD.Core.TransformComponent",
-              "Position": {
-                "x": 2.87478113,
-                "y": 0.03499998,
-                "z": 999.999
-              },
-              "QuaternionRotation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
-              },
-              "Scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.StateAnimationComponent",
-              "ActionSheet": {
-                "move": "573fe938562a4abf91eebf951f21afd5",
-                "stand": "6d381bea1bcb4504b518a1fbfa0904ac",
-                "jump": "59823e146a034e48b8667ebb6f0724b1",
-                "hit": "642ece38d8d449b29ce4479100e37a54",
-                "die": "3c99d6b9b89b4295a9c2749eb02e28e9"
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.SpriteRendererComponent",
-              "ActionSheet": {},
-              "EndFrameIndex": 0,
-              "RenderSetting": 1,
-              "SortingLayer": "MapLayer0",
-              "SpriteRUID": "6d381bea1bcb4504b518a1fbfa0904ac",
-              "StartFrameIndex": 0,
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.RigidbodyComponent",
-              "MoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "RealMoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.MovementComponent",
-              "InputSpeed": 1.5,
-              "JumpForce": 6,
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.AIChaseComponent",
-              "IsLegacy": false,
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.StateComponent",
-              "IsLegacy": false,
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.HitComponent",
-              "BoxSize": {
-                "x": 0.63,
-                "y": 0.58
-              },
-              "ColliderOffset": {
-                "x": 0.0449999869,
-                "y": 0.29
-              },
-              "IsLegacy": false,
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.DamageSkinSpawnerComponent",
-              "Enable": true
-            },
-            {
-              "@type": "script.Monster",
-              "Enable": true,
-              "IsDead": false
-            },
-            {
-              "@type": "script.MonsterAttack",
-              "Enable": true,
-              "SpriteSize": {
-                "x": 0,
-                "y": 0
-              },
-              "PositionOffset": {
-                "x": 0,
-                "y": 0
-              }
-            },
-            {
-              "@type": "MOD.Core.KinematicbodyComponent",
-              "MoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.SideviewbodyComponent",
-              "MoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "Enable": true
-            },
-            {
-              "@type": "MOD.Core.DamageSkinSettingComponent",
-              "DamageSkinId": {
-                "DataId": "02c22d93421b4038b3c413b3e40b57ec"
-              },
-              "Enable": true
-            }
-          ],
-          "@version": 1
-        }
-      },
-      {
-        "id": "8d813684-2b68-4bee-810f-48b0e25e70bb",
-        "path": "/maps/map01/YetiMonster01",
+        "id": "d3190b87-0ba1-46e7-a7e6-5bd2fcf41798",
+        "path": "/maps/map01/Stage1Monster01",
         "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.RigidbodyComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack",
         "jsonString": {
-          "name": "YetiMonster01",
-          "path": "/maps/map01/YetiMonster01",
+          "name": "Stage1Monster01",
+          "path": "/maps/map01/Stage1Monster01",
           "nameEditable": true,
           "enable": true,
           "visible": true,
           "localize": false,
-          "displayOrder": 7,
+          "displayOrder": 8,
           "pathConstraints": "///",
           "revision": 1,
           "modelId": "yetimonster",
@@ -6830,8 +6405,7 @@
             {
               "@type": "MOD.Core.TransformComponent",
               "Position": {
-                "$type": "MOD.Core.MODVector3, MOD.Core",
-                "x": 0,
+                "x": -1.2,
                 "y": 0.4,
                 "z": 0
               },
@@ -6942,9 +6516,9 @@
               "@type": "script.Monster",
               "Enable": true,
               "IsDead": false,
-              "MaxHp": 300,
-              "Hp": 300,
-              "RespawnOn": true,
+              "MaxHp": 150,
+              "Hp": 150,
+              "RespawnOn": false,
               "RespawnDelay": 8,
               "DestroyDelay": 0.6
             },
@@ -6969,7 +6543,655 @@
             "type": "Model",
             "entry_id": "yetimonster",
             "sub_entity_id": null,
-            "root_entity_id": "8d813684-2b68-4bee-810f-48b0e25e70bb",
+            "root_entity_id": "d3190b87-0ba1-46e7-a7e6-5bd2fcf41798",
+            "replaced_model_id": null
+          }
+        }
+      },
+      {
+        "id": "1ebe97db-2619-4d2e-9b7c-a8856ea0617a",
+        "path": "/maps/map01/Stage1Monster02",
+        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.RigidbodyComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack",
+        "jsonString": {
+          "name": "Stage1Monster02",
+          "path": "/maps/map01/Stage1Monster02",
+          "nameEditable": true,
+          "enable": true,
+          "visible": true,
+          "localize": false,
+          "displayOrder": 9,
+          "pathConstraints": "///",
+          "revision": 1,
+          "modelId": "yetimonster",
+          "@components": [
+            {
+              "@type": "MOD.Core.TransformComponent",
+              "Position": {
+                "x": -2.6,
+                "y": 0.4,
+                "z": 0
+              },
+              "QuaternionRotation": {
+                "$type": "MOD.Core.MODQuaternion, MOD.Core",
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "Scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.StateAnimationComponent",
+              "Enable": true,
+              "ActionSheet": {
+                "$type": "MOD.Core.MODSyncDictionary`2[[System.String, mscorlib],[System.String, mscorlib]], MOD.Core",
+                "stand": "2fa39477afb34d8cb6412b7fe5085f42",
+                "move": "02dfd5686d7042768adcea2d24c184b4",
+                "attack": "a9e503154e3e4ad5ab0e9e7742dd53ec",
+                "hit": "186789a04dd34be797ab716279f7fea7",
+                "die": "5a328165fb9a4f47b3810c427b8edbd6"
+              }
+            },
+            {
+              "@type": "MOD.Core.SpriteRendererComponent",
+              "SpriteRUID": "2fa39477afb34d8cb6412b7fe5085f42",
+              "Color": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+              },
+              "DrawMode": 0,
+              "FlipX": false,
+              "FlipY": false,
+              "PlayRate": 1,
+              "OrderInLayer": 2,
+              "StartFrameIndex": 0,
+              "EndFrameIndex": 0,
+              "Enable": true,
+              "ActionSheet": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib"
+              },
+              "SortingLayer": "MapLayer0"
+            },
+            {
+              "@type": "MOD.Core.RigidbodyComponent",
+              "MoveVelocity": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "RealMoveVelocity": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.MovementComponent",
+              "Enable": true,
+              "InputSpeed": 1.2,
+              "JumpForce": 6
+            },
+            {
+              "@type": "MOD.Core.AIChaseComponent",
+              "IsLegacy": false,
+              "Enable": true,
+              "DetectionRange": 5,
+              "IsChaseNearPlayer": true
+            },
+            {
+              "@type": "MOD.Core.StateComponent",
+              "Enable": true,
+              "IsLegacy": false
+            },
+            {
+              "@type": "MOD.Core.HitComponent",
+              "IsLegacy": false,
+              "Enable": true,
+              "BoxSize": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 1.25,
+                "y": 1.35
+              },
+              "ColliderOffset": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0.68
+              },
+              "CollisionGroup": {
+                "$type": "MOD.Core.Physics.CollisionGroup, MOD.Core",
+                "Id": "8992acd1e8cd45838db6f10a7b41df09"
+              }
+            },
+            {
+              "@type": "MOD.Core.DamageSkinSpawnerComponent",
+              "Enable": true
+            },
+            {
+              "@type": "script.Monster",
+              "Enable": true,
+              "IsDead": false,
+              "MaxHp": 150,
+              "Hp": 150,
+              "RespawnOn": false,
+              "RespawnDelay": 8,
+              "DestroyDelay": 0.6
+            },
+            {
+              "@type": "script.MonsterAttack",
+              "Enable": true,
+              "SpriteSize": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "PositionOffset": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "AttackInterval": 1
+            }
+          ],
+          "@version": 1,
+          "origin": {
+            "type": "Model",
+            "entry_id": "yetimonster",
+            "sub_entity_id": null,
+            "root_entity_id": "1ebe97db-2619-4d2e-9b7c-a8856ea0617a",
+            "replaced_model_id": null
+          }
+        }
+      },
+      {
+        "id": "8e05bb6f-060a-4475-9474-ce971930453f",
+        "path": "/maps/map01/Stage1Monster03",
+        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.RigidbodyComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack",
+        "jsonString": {
+          "name": "Stage1Monster03",
+          "path": "/maps/map01/Stage1Monster03",
+          "nameEditable": true,
+          "enable": true,
+          "visible": true,
+          "localize": false,
+          "displayOrder": 10,
+          "pathConstraints": "///",
+          "revision": 1,
+          "modelId": "yetimonster",
+          "@components": [
+            {
+              "@type": "MOD.Core.TransformComponent",
+              "Position": {
+                "x": -4,
+                "y": 0.4,
+                "z": 0
+              },
+              "QuaternionRotation": {
+                "$type": "MOD.Core.MODQuaternion, MOD.Core",
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "Scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.StateAnimationComponent",
+              "Enable": true,
+              "ActionSheet": {
+                "$type": "MOD.Core.MODSyncDictionary`2[[System.String, mscorlib],[System.String, mscorlib]], MOD.Core",
+                "stand": "2fa39477afb34d8cb6412b7fe5085f42",
+                "move": "02dfd5686d7042768adcea2d24c184b4",
+                "attack": "a9e503154e3e4ad5ab0e9e7742dd53ec",
+                "hit": "186789a04dd34be797ab716279f7fea7",
+                "die": "5a328165fb9a4f47b3810c427b8edbd6"
+              }
+            },
+            {
+              "@type": "MOD.Core.SpriteRendererComponent",
+              "SpriteRUID": "2fa39477afb34d8cb6412b7fe5085f42",
+              "Color": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+              },
+              "DrawMode": 0,
+              "FlipX": false,
+              "FlipY": false,
+              "PlayRate": 1,
+              "OrderInLayer": 2,
+              "StartFrameIndex": 0,
+              "EndFrameIndex": 0,
+              "Enable": true,
+              "ActionSheet": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib"
+              },
+              "SortingLayer": "MapLayer0"
+            },
+            {
+              "@type": "MOD.Core.RigidbodyComponent",
+              "MoveVelocity": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "RealMoveVelocity": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.MovementComponent",
+              "Enable": true,
+              "InputSpeed": 1.2,
+              "JumpForce": 6
+            },
+            {
+              "@type": "MOD.Core.AIChaseComponent",
+              "IsLegacy": false,
+              "Enable": true,
+              "DetectionRange": 5,
+              "IsChaseNearPlayer": true
+            },
+            {
+              "@type": "MOD.Core.StateComponent",
+              "Enable": true,
+              "IsLegacy": false
+            },
+            {
+              "@type": "MOD.Core.HitComponent",
+              "IsLegacy": false,
+              "Enable": true,
+              "BoxSize": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 1.25,
+                "y": 1.35
+              },
+              "ColliderOffset": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0.68
+              },
+              "CollisionGroup": {
+                "$type": "MOD.Core.Physics.CollisionGroup, MOD.Core",
+                "Id": "8992acd1e8cd45838db6f10a7b41df09"
+              }
+            },
+            {
+              "@type": "MOD.Core.DamageSkinSpawnerComponent",
+              "Enable": true
+            },
+            {
+              "@type": "script.Monster",
+              "Enable": true,
+              "IsDead": false,
+              "MaxHp": 150,
+              "Hp": 150,
+              "RespawnOn": false,
+              "RespawnDelay": 8,
+              "DestroyDelay": 0.6
+            },
+            {
+              "@type": "script.MonsterAttack",
+              "Enable": true,
+              "SpriteSize": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "PositionOffset": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "AttackInterval": 1
+            }
+          ],
+          "@version": 1,
+          "origin": {
+            "type": "Model",
+            "entry_id": "yetimonster",
+            "sub_entity_id": null,
+            "root_entity_id": "8e05bb6f-060a-4475-9474-ce971930453f",
+            "replaced_model_id": null
+          }
+        }
+      },
+      {
+        "id": "0289285f-b083-48d3-93ae-a1f05672313e",
+        "path": "/maps/map01/Stage1Monster04",
+        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.RigidbodyComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack",
+        "jsonString": {
+          "name": "Stage1Monster04",
+          "path": "/maps/map01/Stage1Monster04",
+          "nameEditable": true,
+          "enable": true,
+          "visible": true,
+          "localize": false,
+          "displayOrder": 11,
+          "pathConstraints": "///",
+          "revision": 1,
+          "modelId": "yetimonster",
+          "@components": [
+            {
+              "@type": "MOD.Core.TransformComponent",
+              "Position": {
+                "x": -5.4,
+                "y": 0.4,
+                "z": 0
+              },
+              "QuaternionRotation": {
+                "$type": "MOD.Core.MODQuaternion, MOD.Core",
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "Scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.StateAnimationComponent",
+              "Enable": true,
+              "ActionSheet": {
+                "$type": "MOD.Core.MODSyncDictionary`2[[System.String, mscorlib],[System.String, mscorlib]], MOD.Core",
+                "stand": "2fa39477afb34d8cb6412b7fe5085f42",
+                "move": "02dfd5686d7042768adcea2d24c184b4",
+                "attack": "a9e503154e3e4ad5ab0e9e7742dd53ec",
+                "hit": "186789a04dd34be797ab716279f7fea7",
+                "die": "5a328165fb9a4f47b3810c427b8edbd6"
+              }
+            },
+            {
+              "@type": "MOD.Core.SpriteRendererComponent",
+              "SpriteRUID": "2fa39477afb34d8cb6412b7fe5085f42",
+              "Color": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+              },
+              "DrawMode": 0,
+              "FlipX": false,
+              "FlipY": false,
+              "PlayRate": 1,
+              "OrderInLayer": 2,
+              "StartFrameIndex": 0,
+              "EndFrameIndex": 0,
+              "Enable": true,
+              "ActionSheet": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib"
+              },
+              "SortingLayer": "MapLayer0"
+            },
+            {
+              "@type": "MOD.Core.RigidbodyComponent",
+              "MoveVelocity": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "RealMoveVelocity": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.MovementComponent",
+              "Enable": true,
+              "InputSpeed": 1.2,
+              "JumpForce": 6
+            },
+            {
+              "@type": "MOD.Core.AIChaseComponent",
+              "IsLegacy": false,
+              "Enable": true,
+              "DetectionRange": 5,
+              "IsChaseNearPlayer": true
+            },
+            {
+              "@type": "MOD.Core.StateComponent",
+              "Enable": true,
+              "IsLegacy": false
+            },
+            {
+              "@type": "MOD.Core.HitComponent",
+              "IsLegacy": false,
+              "Enable": true,
+              "BoxSize": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 1.25,
+                "y": 1.35
+              },
+              "ColliderOffset": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0.68
+              },
+              "CollisionGroup": {
+                "$type": "MOD.Core.Physics.CollisionGroup, MOD.Core",
+                "Id": "8992acd1e8cd45838db6f10a7b41df09"
+              }
+            },
+            {
+              "@type": "MOD.Core.DamageSkinSpawnerComponent",
+              "Enable": true
+            },
+            {
+              "@type": "script.Monster",
+              "Enable": true,
+              "IsDead": false,
+              "MaxHp": 150,
+              "Hp": 150,
+              "RespawnOn": false,
+              "RespawnDelay": 8,
+              "DestroyDelay": 0.6
+            },
+            {
+              "@type": "script.MonsterAttack",
+              "Enable": true,
+              "SpriteSize": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "PositionOffset": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "AttackInterval": 1
+            }
+          ],
+          "@version": 1,
+          "origin": {
+            "type": "Model",
+            "entry_id": "yetimonster",
+            "sub_entity_id": null,
+            "root_entity_id": "0289285f-b083-48d3-93ae-a1f05672313e",
+            "replaced_model_id": null
+          }
+        }
+      },
+      {
+        "id": "37cc6806-159a-48a6-9b06-3b95242002d6",
+        "path": "/maps/map01/Stage1Monster05",
+        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.RigidbodyComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack",
+        "jsonString": {
+          "name": "Stage1Monster05",
+          "path": "/maps/map01/Stage1Monster05",
+          "nameEditable": true,
+          "enable": true,
+          "visible": true,
+          "localize": false,
+          "displayOrder": 12,
+          "pathConstraints": "///",
+          "revision": 1,
+          "modelId": "yetimonster",
+          "@components": [
+            {
+              "@type": "MOD.Core.TransformComponent",
+              "Position": {
+                "x": -6.8,
+                "y": 0.4,
+                "z": 0
+              },
+              "QuaternionRotation": {
+                "$type": "MOD.Core.MODQuaternion, MOD.Core",
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "Scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.StateAnimationComponent",
+              "Enable": true,
+              "ActionSheet": {
+                "$type": "MOD.Core.MODSyncDictionary`2[[System.String, mscorlib],[System.String, mscorlib]], MOD.Core",
+                "stand": "2fa39477afb34d8cb6412b7fe5085f42",
+                "move": "02dfd5686d7042768adcea2d24c184b4",
+                "attack": "a9e503154e3e4ad5ab0e9e7742dd53ec",
+                "hit": "186789a04dd34be797ab716279f7fea7",
+                "die": "5a328165fb9a4f47b3810c427b8edbd6"
+              }
+            },
+            {
+              "@type": "MOD.Core.SpriteRendererComponent",
+              "SpriteRUID": "2fa39477afb34d8cb6412b7fe5085f42",
+              "Color": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+              },
+              "DrawMode": 0,
+              "FlipX": false,
+              "FlipY": false,
+              "PlayRate": 1,
+              "OrderInLayer": 2,
+              "StartFrameIndex": 0,
+              "EndFrameIndex": 0,
+              "Enable": true,
+              "ActionSheet": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib"
+              },
+              "SortingLayer": "MapLayer0"
+            },
+            {
+              "@type": "MOD.Core.RigidbodyComponent",
+              "MoveVelocity": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "RealMoveVelocity": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.MovementComponent",
+              "Enable": true,
+              "InputSpeed": 1.2,
+              "JumpForce": 6
+            },
+            {
+              "@type": "MOD.Core.AIChaseComponent",
+              "IsLegacy": false,
+              "Enable": true,
+              "DetectionRange": 5,
+              "IsChaseNearPlayer": true
+            },
+            {
+              "@type": "MOD.Core.StateComponent",
+              "Enable": true,
+              "IsLegacy": false
+            },
+            {
+              "@type": "MOD.Core.HitComponent",
+              "IsLegacy": false,
+              "Enable": true,
+              "BoxSize": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 1.25,
+                "y": 1.35
+              },
+              "ColliderOffset": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0.68
+              },
+              "CollisionGroup": {
+                "$type": "MOD.Core.Physics.CollisionGroup, MOD.Core",
+                "Id": "8992acd1e8cd45838db6f10a7b41df09"
+              }
+            },
+            {
+              "@type": "MOD.Core.DamageSkinSpawnerComponent",
+              "Enable": true
+            },
+            {
+              "@type": "script.Monster",
+              "Enable": true,
+              "IsDead": false,
+              "MaxHp": 150,
+              "Hp": 150,
+              "RespawnOn": false,
+              "RespawnDelay": 8,
+              "DestroyDelay": 0.6
+            },
+            {
+              "@type": "script.MonsterAttack",
+              "Enable": true,
+              "SpriteSize": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "PositionOffset": {
+                "$type": "MOD.Core.MODVector2, MOD.Core",
+                "x": 0,
+                "y": 0
+              },
+              "AttackInterval": 1
+            }
+          ],
+          "@version": 1,
+          "origin": {
+            "type": "Model",
+            "entry_id": "yetimonster",
+            "sub_entity_id": null,
+            "root_entity_id": "37cc6806-159a-48a6-9b06-3b95242002d6",
             "replaced_model_id": null
           }
         }

@@ -4,6 +4,8 @@ script MonsterAttack extends AttackComponent
 	@MinValue(0)
 	property number AttackInterval = 0.03
 
+	property integer AttackDamage = 10
+
 	@HideFromInspector
 	property any Shape = nil
 
@@ -15,6 +17,7 @@ script MonsterAttack extends AttackComponent
 
 	@ExecSpace("ServerOnly")
 	method void OnBeginPlay()
+		-- Builds a reusable attack shape from the monster's first animation frame.
 		local monster = self.Entity.Monster
 		if not monster then
 			return
@@ -41,6 +44,7 @@ script MonsterAttack extends AttackComponent
 	end
 
 	method void AttackNear()
+		-- Attacks players inside the monster sprite bounds.
 		local transformComponent = self.Entity.TransformComponent
 		
 		if isvalid(transformComponent) then
@@ -58,7 +62,13 @@ script MonsterAttack extends AttackComponent
 		self:AttackFast(self.Shape, nil, CollisionGroups.Player)
 	end
 
+	method integer CalcDamage(Entity attacker, Entity defender, string attackInfo)
+		-- Uses the monster model's configured attack damage.
+		return self.AttackDamage
+	end
+
 	method boolean IsAttackTarget(Entity defender, string attackInfo)
+		-- Allows this monster attack to hit only player entities.
 		if isvalid(defender.PlayerComponent) == false then
 			return false
 		end

@@ -23,6 +23,9 @@ approval_mode = "approve"
 [mcp_servers.msw-maker-mcp.tools.maker_execute_script]
 approval_mode = "approve"
 
+[mcp_servers.msw-maker-mcp.tools.maker_get_current_map]
+approval_mode = "approve"
+
 [mcp_servers.msw-mcp]
 url = "https://msw-mcp.nexon.com/mcp"
 http_headers = { "Authorization" = "Bearer 32fd6de2a3e243f291fe5950990df0c9" }

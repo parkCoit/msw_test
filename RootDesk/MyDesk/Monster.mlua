@@ -8,6 +8,9 @@ script Monster extends Component
 	property number Hp = 0
 
 	@Sync
+	property number Defense = 0
+
+	@Sync
 	property boolean RespawnOn = false
 
 	@Sync
@@ -36,6 +39,7 @@ script Monster extends Component
 
 	@ExecSpace("ServerOnly")
 	method void Dead()
+		-- Changes this monster into the dead state and hides or destroys it after the death delay.
 		self.IsDead = true
 		local stateComponent = self.Entity.StateComponent
 		if stateComponent then
@@ -57,6 +61,7 @@ script Monster extends Component
 
 	@ExecSpace("ServerOnly")
 	method void Respawn()
+		-- Restores this monster for respawn-enabled monster models.
 		log("Respawn")
 		self.IsDead = false
 		self.Entity:SetVisible(true)
@@ -72,7 +77,7 @@ script Monster extends Component
 	@ExecSpace("ServerOnly")
 	@EventSender("Self")
 	handler HandleHitEvent(HitEvent event)
-		-- Parameters
+		-- Applies incoming HitEvent damage after this monster's defense value.
 		-- local AttackCenter = event.AttackCenter
 		-- local AttackerEntity = event.AttackerEntity
 		-- local Damages = event.Damages
@@ -82,7 +87,8 @@ script Monster extends Component
 		--------------------------------------------------------
 		
 		local originalHp = self.Hp
-		self.Hp = self.Hp - TotalDamage
+		local effectiveDamage = math.max(TotalDamage - self.Defense, 1)
+		self.Hp = self.Hp - effectiveDamage
 		
 		if self.Hp > 0 or originalHp <= 0 then
 			return

@@ -1,16 +1,25 @@
 @Component
 script PlayerAttack extends AttackComponent
 
+	property integer BaseDamage = 50
+
+	property integer StageDamageBonus = 25
+
+	@HideFromInspector
+	property integer CurrentStage = 1
+
 	@HideFromInspector
 	property any Shape = nil
 
 	@ExecSpace("ServerOnly")
 	method void OnBeginPlay()
+		-- Initializes the reusable melee attack shape.
 		self.Shape = BoxShape(Vector2.zero, Vector2.one, 0)
 	end
 
 	@ExecSpace("ServerOnly")
 	method void AttackNormal()
+		-- Performs a frontal melee attack using the player's current facing direction.
 		local playerController = self.Entity.PlayerControllerComponent
 		local transform = self.Entity.TransformComponent
 		if playerController and transform then
@@ -22,22 +31,25 @@ script PlayerAttack extends AttackComponent
 		end
 	end
 
-	method int CalcDamage(Entity attacker, Entity defender, string attackInfo)
-		return 50
+	method integer CalcDamage(Entity attacker, Entity defender, string attackInfo)
+		-- Scales player damage as stages advance.
+		return self.BaseDamage + (self.CurrentStage - 1) * self.StageDamageBonus
 	end
 
 	method boolean CalcCritical(Entity attacker, Entity defender, string attackInfo)
+		-- Applies the default critical chance for player attacks.
 		return _UtilLogic:RandomDouble() < 0.3
 	end
 
-	method number GetCriticalDamageRate()
+	method float GetCriticalDamageRate()
+		-- Doubles damage on critical hits.
 		return 2
 	end
 
 	@ExecSpace("ServerOnly")
 	@EventSender("Self")
 	handler HandlePlayerActionEvent(PlayerActionEvent event)
-		-- Parameters
+		-- Routes the default player Attack action into the same attack function used by auto battle.
 		local ActionName = event.ActionName
 		-- local PlayerEntity = event.PlayerEntity
 		--------------------------------------------------------

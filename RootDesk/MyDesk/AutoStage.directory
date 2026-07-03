@@ -1,0 +1,23 @@
+{
+  "Id": "",
+  "GameId": "",
+  "EntryKey": "directory://e7fb5fd42d054c3f937afce6cfe72e21",
+  "ContentType": "x-mod/directory",
+  "Content": "",
+  "Usage": 0,
+  "UsePublish": 1,
+  "UseService": 0,
+  "CoreVersion": "26.5.0.0",
+  "StudioVersion": "",
+  "DynamicLoading": 0,
+  "ContentProto": {
+    "Use": "Json",
+    "Json": {
+      "entry_id": "directory://e7fb5fd42d054c3f937afce6cfe72e21",
+      "name": "AutoStage",
+      "lock": false,
+      "folding": false,
+      "nameEditable": true
+    }
+  }
+}

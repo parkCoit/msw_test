@@ -1,0 +1,277 @@
+@Logic
+script StageAutoBattleLogic extends Logic
+
+	property number AutoMoveSpeed = 1.8
+
+	property number AttackCooldown = 0.4
+
+	property number Stage2TriggerX = -8.6
+
+	property number Stage2SpawnY = 0.4
+
+	property integer Stage2MonsterCount = 5
+
+	property string Stage2MonsterModelId = "orangemushroomstage2"
+
+	@Sync
+	property boolean Stage2Spawned = false
+
+	@Sync
+	property boolean Stage2Cleared = false
+
+	@HideFromInspector
+	property number AttackTimer = 0
+
+	@HideFromInspector
+	property boolean WasActive = false
+
+	@HideFromInspector
+	property boolean LoggedAttackRequest = false
+
+	@HideFromInspector
+	property boolean LoggedAutoStart = false
+
+	@HideFromInspector
+	property boolean LoggedStage1Clear = false
+
+	@HideFromInspector
+	property boolean LoggedStage2SpawnRequest = false
+
+	@ExecSpace("ClientOnly")
+	method void OnBeginPlay()
+		-- Logs that the stage auto-battle controller was loaded on the client.
+		log("[StageAutoBattle] client ready")
+	end
+
+	@ExecSpace("ClientOnly")
+	method void OnUpdate(number delta)
+		-- Moves the local player left and drives stage-specific auto attacks and Stage 2 spawn requests.
+		local player = _UserService.LocalPlayer
+		if isvalid(player) == false then
+			return
+		end
+
+		local map = player.CurrentMap
+		if isvalid(map) == false or map.Name ~= "map01" then
+			self.WasActive = false
+			return
+		end
+
+		if self.Stage2Cleared then
+			self:StopPlayer(player)
+			return
+		end
+
+		if self.WasActive == false then
+			if self.LoggedAutoStart == false then
+				log("[StageAutoBattle] started moving left and auto-attacking")
+				self.LoggedAutoStart = true
+			end
+			self.WasActive = true
+		end
+
+		self:MovePlayerLeft(player, delta)
+
+		if self:HasAliveStageMonster(1) then
+			self:TickAutoAttack(delta, 1)
+			return
+		end
+
+		if self.LoggedStage1Clear == false then
+			log("[StageAutoBattle] Stage 1 cleared; walking to Stage 2 trigger")
+			self.LoggedStage1Clear = true
+		end
+
+		if self.Stage2Spawned == false then
+			local pos = player.TransformComponent.WorldPosition
+			if pos.x <= self.Stage2TriggerX then
+				if self.LoggedStage2SpawnRequest == false then
+					log("[StageAutoBattle] Stage 2 trigger reached")
+					self.LoggedStage2SpawnRequest = true
+				end
+				self:RequestSpawnStage2()
+			end
+			return
+		end
+
+		if self:HasAliveStageMonster(2) then
+			self:TickAutoAttack(delta, 2)
+			return
+		end
+
+		self:StopPlayer(player)
+		if self.Stage2Cleared == false then
+			self:RequestStage2Cleared()
+		end
+	end
+
+	method void MovePlayerLeft(Entity player, number delta)
+		-- Applies continuous left movement through MovementComponent.
+		local movement = player.MovementComponent
+		if isvalid(movement) then
+			movement.InputSpeed = self.AutoMoveSpeed
+			movement:MoveToDirection(Vector2(-1, 0), delta)
+		end
+	end
+
+	method void StopPlayer(Entity player)
+		-- Stops the local player's automatic movement.
+		local movement = player.MovementComponent
+		if isvalid(movement) then
+			movement:Stop()
+		end
+		self.WasActive = false
+	end
+
+	method void TickAutoAttack(number delta, integer stage)
+		-- Requests one server attack whenever the local cooldown expires.
+		self.AttackTimer = self.AttackTimer - delta
+		if self.AttackTimer <= 0 then
+			self.AttackTimer = self.AttackCooldown
+			self:RequestAutoAttack(stage)
+		end
+	end
+
+	method boolean HasAliveStageMonster(integer stage)
+		-- Checks fixed stage monster names on map01.
+		local prefix = "/maps/map01/Stage1Monster0"
+		if stage == 2 then
+			prefix = "/maps/map01/Stage2Monster0"
+		end
+
+		for i = 1, 5 do
+			local monsterEntity = _EntityService:GetEntityByPath(prefix .. tostring(i))
+			if isvalid(monsterEntity) then
+				---@type Monster
+				local monster = monsterEntity:GetComponent("script.Monster")
+				if isvalid(monster) and monster.IsDead == false and monster.Hp > 0 then
+					return true
+				end
+			end
+		end
+
+		return false
+	end
+
+	method Entity FindNearestStageMonster(Entity player, integer stage)
+		-- Finds the nearest alive monster for the current auto-attack stage.
+		local prefix = "/maps/map01/Stage1Monster0"
+		if stage == 2 then
+			prefix = "/maps/map01/Stage2Monster0"
+		end
+
+		local playerPos = player.TransformComponent.WorldPosition
+		local nearest = nil
+		local nearestDist = 999999
+		for i = 1, 5 do
+			local monsterEntity = _EntityService:GetEntityByPath(prefix .. tostring(i))
+			if isvalid(monsterEntity) then
+				---@type Monster
+				local monster = monsterEntity:GetComponent("script.Monster")
+				if isvalid(monster) and monster.IsDead == false and monster.Hp > 0 then
+					local monsterPos = monsterEntity.TransformComponent.WorldPosition
+					local dx = monsterPos.x - playerPos.x
+					local dy = monsterPos.y - playerPos.y
+					local dist = dx * dx + dy * dy
+					if dist < nearestDist then
+						nearest = monsterEntity
+						nearestDist = dist
+					end
+				end
+			end
+		end
+
+		return nearest
+	end
+
+	@ExecSpace("Server")
+	method void RequestAutoAttack(integer stage)
+		-- Calls the existing PlayerAttack component on the requesting player's server entity.
+		local player = _UserService:GetUserEntityByUserId(senderUserId)
+		if isvalid(player) == false then
+			return
+		end
+
+		if player.CurrentMapName ~= "map01" then
+			return
+		end
+
+		local target = self:FindNearestStageMonster(player, stage)
+		local playerController = player.PlayerControllerComponent
+		if isvalid(playerController) then
+			playerController.LookDirectionX = -1
+			if isvalid(target) then
+				local playerPos = player.TransformComponent.WorldPosition
+				local targetPos = target.TransformComponent.WorldPosition
+				if targetPos.x > playerPos.x then
+					playerController.LookDirectionX = 1
+				end
+			end
+		end
+
+		local state = player.StateComponent
+		if isvalid(state) then
+			state:ChangeState("ATTACK")
+		end
+
+		---@type PlayerAttack
+		local playerAttack = player:GetComponent("script.PlayerAttack")
+		if isvalid(playerAttack) == false then
+			log_warning("[StageAutoBattle] player has no script.PlayerAttack component")
+			return
+		end
+
+		playerAttack.CurrentStage = stage
+		playerAttack:AttackNormal()
+		if self.LoggedAttackRequest == false then
+			log("[StageAutoBattle] requested PlayerAttack:AttackNormal")
+			self.LoggedAttackRequest = true
+		end
+	end
+
+	@ExecSpace("Server")
+	method void RequestSpawnStage2()
+		-- Spawns the Stage 2 Orange Mushroom wave once when the requesting player reaches the trigger.
+		if self.Stage2Spawned then
+			return
+		end
+
+		local player = _UserService:GetUserEntityByUserId(senderUserId)
+		if isvalid(player) == false or player.CurrentMapName ~= "map01" then
+			return
+		end
+
+		local map = player.CurrentMap
+		if isvalid(map) == false then
+			return
+		end
+
+		self.Stage2Spawned = true
+		for i = 1, self.Stage2MonsterCount do
+			local x = -8.2 + (i - 1) * 1.2
+			local name = "Stage2Monster0" .. tostring(i)
+			local spawned = _SpawnService:SpawnByModelId(self.Stage2MonsterModelId, name, Vector3(x, self.Stage2SpawnY, 0), map)
+			if isvalid(spawned) == false then
+				log_error("[StageAutoBattle] failed to spawn " .. name)
+			end
+		end
+
+		log("[StageAutoBattle] Stage 2 spawned Orange Mushroom x5")
+	end
+
+	@ExecSpace("Server")
+	method void RequestStage2Cleared()
+		-- Marks Stage 2 as cleared after every Stage 2 monster is gone.
+		if self.Stage2Cleared then
+			return
+		end
+
+		if self:HasAliveStageMonster(2) then
+			return
+		end
+
+		self.Stage2Cleared = true
+		log("[StageAutoBattle] Stage 2 cleared")
+	end
+
+end
