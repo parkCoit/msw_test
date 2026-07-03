@@ -1,0 +1,28 @@
+[mcp_servers.msw-maker-mcp]
+command = "/bin/sh"
+args = ["-c", "exec \"$1\"", "msw-maker-mcp", "/Library/Application Support/Nexon/MapleStory Worlds/MapleStory Worlds.app/Contents/MacOS/MakerMCP"]
+
+[mcp_servers.msw-maker-mcp.tools.maker_stop]
+approval_mode = "approve"
+
+[mcp_servers.msw-maker-mcp.tools.maker_clear_logs]
+approval_mode = "approve"
+
+[mcp_servers.msw-maker-mcp.tools.maker_refresh_workspace]
+approval_mode = "approve"
+
+[mcp_servers.msw-maker-mcp.tools.maker_logs]
+approval_mode = "approve"
+
+[mcp_servers.msw-maker-mcp.tools.maker_play]
+approval_mode = "approve"
+
+[mcp_servers.msw-maker-mcp.tools.maker_get_context_keys]
+approval_mode = "approve"
+
+[mcp_servers.msw-maker-mcp.tools.maker_execute_script]
+approval_mode = "approve"
+
+[mcp_servers.msw-mcp]
+url = "https://msw-mcp.nexon.com/mcp"
+http_headers = { "Authorization" = "Bearer 32fd6de2a3e243f291fe5950990df0c9" }
