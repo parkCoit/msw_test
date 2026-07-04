@@ -1,0 +1,23 @@
+{
+  "Id": "",
+  "GameId": "",
+  "EntryKey": "directory://a0104ad2-244d-4d7e-8c98-c2009d1dfca6",
+  "ContentType": "x-mod/directory",
+  "Content": "",
+  "Usage": 0,
+  "UsePublish": 1,
+  "UseService": 0,
+  "CoreVersion": "26.5.0.0",
+  "StudioVersion": "",
+  "DynamicLoading": 0,
+  "ContentProto": {
+    "Use": "Json",
+    "Json": {
+      "entry_id": "directory://a0104ad2-244d-4d7e-8c98-c2009d1dfca6",
+      "name": "Warrior",
+      "lock": false,
+      "folding": false,
+      "nameEditable": true
+    }
+  }
+}

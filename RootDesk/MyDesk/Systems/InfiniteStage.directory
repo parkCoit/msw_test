@@ -1,0 +1,23 @@
+{
+  "Id": "",
+  "GameId": "",
+  "EntryKey": "directory://3a0cdf11-faad-4f14-b70f-b9bf140535f5",
+  "ContentType": "x-mod/directory",
+  "Content": "",
+  "Usage": 0,
+  "UsePublish": 1,
+  "UseService": 0,
+  "CoreVersion": "26.5.0.0",
+  "StudioVersion": "",
+  "DynamicLoading": 0,
+  "ContentProto": {
+    "Use": "Json",
+    "Json": {
+      "entry_id": "directory://3a0cdf11-faad-4f14-b70f-b9bf140535f5",
+      "name": "InfiniteStage",
+      "lock": false,
+      "folding": false,
+      "nameEditable": true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "Id": "",
+  "GameId": "",
+  "EntryKey": "directory://2af0db04ecff46f381cb02c71c6f5c78",
+  "ContentType": "x-mod/directory",
+  "Content": "",
+  "Usage": 0,
+  "UsePublish": 1,
+  "UseService": 0,
+  "CoreVersion": "26.5.0.0",
+  "StudioVersion": "",
+  "DynamicLoading": 0,
+  "ContentProto": {
+    "Use": "Json",
+    "Json": {
+      "entry_id": "directory://2af0db04ecff46f381cb02c71c6f5c78",
+      "name": "Terrain",
+      "lock": false,
+      "folding": false,
+      "nameEditable": true
+    }
+  }
+}

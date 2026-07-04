@@ -1,0 +1,23 @@
+{
+  "Id": "",
+  "GameId": "",
+  "EntryKey": "directory://459ba567-de0f-46b1-921d-0a3b0200d9dc",
+  "ContentType": "x-mod/directory",
+  "Content": "",
+  "Usage": 0,
+  "UsePublish": 1,
+  "UseService": 0,
+  "CoreVersion": "26.5.0.0",
+  "StudioVersion": "",
+  "DynamicLoading": 0,
+  "ContentProto": {
+    "Use": "Json",
+    "Json": {
+      "entry_id": "directory://459ba567-de0f-46b1-921d-0a3b0200d9dc",
+      "name": "Mage",
+      "lock": false,
+      "folding": false,
+      "nameEditable": true
+    }
+  }
+}

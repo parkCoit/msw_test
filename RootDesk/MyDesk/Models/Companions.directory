@@ -1,0 +1,23 @@
+{
+  "Id": "",
+  "GameId": "",
+  "EntryKey": "directory://5425708a-40ca-4cbf-accf-7461b260eb40",
+  "ContentType": "x-mod/directory",
+  "Content": "",
+  "Usage": 0,
+  "UsePublish": 1,
+  "UseService": 0,
+  "CoreVersion": "26.5.0.0",
+  "StudioVersion": "",
+  "DynamicLoading": 0,
+  "ContentProto": {
+    "Use": "Json",
+    "Json": {
+      "entry_id": "directory://5425708a-40ca-4cbf-accf-7461b260eb40",
+      "name": "Companions",
+      "lock": false,
+      "folding": false,
+      "nameEditable": true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "Id": "",
+  "GameId": "",
+  "EntryKey": "directory://6e681b74-de90-49dd-81fb-5bc6e28e983d",
+  "ContentType": "x-mod/directory",
+  "Content": "",
+  "Usage": 0,
+  "UsePublish": 1,
+  "UseService": 0,
+  "CoreVersion": "26.5.0.0",
+  "StudioVersion": "",
+  "DynamicLoading": 0,
+  "ContentProto": {
+    "Use": "Json",
+    "Json": {
+      "entry_id": "directory://6e681b74-de90-49dd-81fb-5bc6e28e983d",
+      "name": "Archer",
+      "lock": false,
+      "folding": false,
+      "nameEditable": true
+    }
+  }
+}

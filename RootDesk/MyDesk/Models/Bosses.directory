@@ -1,0 +1,23 @@
+{
+  "Id": "",
+  "GameId": "",
+  "EntryKey": "directory://440c5402-6033-4ea5-91e9-ea76d0b82aa3",
+  "ContentType": "x-mod/directory",
+  "Content": "",
+  "Usage": 0,
+  "UsePublish": 1,
+  "UseService": 0,
+  "CoreVersion": "26.5.0.0",
+  "StudioVersion": "",
+  "DynamicLoading": 0,
+  "ContentProto": {
+    "Use": "Json",
+    "Json": {
+      "entry_id": "directory://440c5402-6033-4ea5-91e9-ea76d0b82aa3",
+      "name": "Bosses",
+      "lock": false,
+      "folding": false,
+      "nameEditable": true
+    }
+  }
+}

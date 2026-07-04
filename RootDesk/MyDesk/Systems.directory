@@ -1,0 +1,23 @@
+{
+  "Id": "",
+  "GameId": "",
+  "EntryKey": "directory://a5ddbe9f-b8d5-4f60-859f-e9b1b68a02f5",
+  "ContentType": "x-mod/directory",
+  "Content": "",
+  "Usage": 0,
+  "UsePublish": 1,
+  "UseService": 0,
+  "CoreVersion": "26.5.0.0",
+  "StudioVersion": "",
+  "DynamicLoading": 0,
+  "ContentProto": {
+    "Use": "Json",
+    "Json": {
+      "entry_id": "directory://a5ddbe9f-b8d5-4f60-859f-e9b1b68a02f5",
+      "name": "Systems",
+      "lock": false,
+      "folding": false,
+      "nameEditable": true
+    }
+  }
+}

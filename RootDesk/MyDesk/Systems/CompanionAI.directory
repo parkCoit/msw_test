@@ -1,0 +1,23 @@
+{
+  "Id": "",
+  "GameId": "",
+  "EntryKey": "directory://cda99060-f6a0-4e13-b537-3369ba624351",
+  "ContentType": "x-mod/directory",
+  "Content": "",
+  "Usage": 0,
+  "UsePublish": 1,
+  "UseService": 0,
+  "CoreVersion": "26.5.0.0",
+  "StudioVersion": "",
+  "DynamicLoading": 0,
+  "ContentProto": {
+    "Use": "Json",
+    "Json": {
+      "entry_id": "directory://cda99060-f6a0-4e13-b537-3369ba624351",
+      "name": "CompanionAI",
+      "lock": false,
+      "folding": false,
+      "nameEditable": true
+    }
+  }
+}
