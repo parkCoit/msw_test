@@ -29,3 +29,6 @@ approval_mode = "approve"
 [mcp_servers.msw-mcp]
 url = "https://msw-mcp.nexon.com/mcp"
 http_headers = { "Authorization" = "Bearer 32fd6de2a3e243f291fe5950990df0c9" }
+
+[mcp_servers.msw-mcp.tools.asset_get_account_thumbnail]
+approval_mode = "approve"

@@ -1,0 +1,65 @@
+@Logic
+script AutoBattleHUD extends Logic
+
+	property ButtonComponent toggleButton = "8e2cc061-52e2-4a8a-8e27-ec6a519699c8"
+
+	property TextComponent toggleLabel = "8e2cc061-52e2-4a8a-8e27-ec6a519699c8"
+
+	@HideFromInspector
+	property any clickHandler = nil
+
+	@HideFromInspector
+	property boolean isAutoBattleOn = false
+
+	@ExecSpace("ClientOnly")
+	method void OnBeginPlay()
+		-- Wires the on-screen auto-battle toggle button.
+		self.isAutoBattleOn = false
+		self:ApplyState(false)
+
+		if _StageAutoBattleLogic ~= nil then
+			_StageAutoBattleLogic:SetAutoBattleEnabled(false)
+		end
+
+		local onClick = function()
+			self:ToggleAutoBattle()
+		end
+
+		if isvalid(self.toggleButton) then
+			self.clickHandler = self.toggleButton.Entity:ConnectEvent(ButtonClickEvent, onClick)
+		end
+	end
+
+	method void ToggleAutoBattle()
+		-- Toggles the stage auto battle state and updates the button label.
+		self.isAutoBattleOn = not self.isAutoBattleOn
+		self:ApplyState(self.isAutoBattleOn)
+
+		if _StageAutoBattleLogic ~= nil then
+			_StageAutoBattleLogic:SetAutoBattleEnabled(self.isAutoBattleOn)
+		else
+			log_warning("[AutoBattleHUD] StageAutoBattleLogic is not available")
+		end
+	end
+
+	method void ApplyState(boolean enabled)
+		-- Applies the current toggle state to the button label.
+		if isvalid(self.toggleLabel) then
+			if enabled then
+				self.toggleLabel.Text = "AUTO ON"
+			else
+				self.toggleLabel.Text = "AUTO OFF"
+			end
+		end
+	end
+
+	@ExecSpace("ClientOnly")
+	method void OnEndPlay()
+		-- Disconnects button hooks when the UI is removed.
+		if isvalid(self.toggleButton) and self.clickHandler ~= nil then
+			self.toggleButton.Entity:DisconnectEvent(ButtonClickEvent, self.clickHandler)
+			self.clickHandler = nil
+		end
+	end
+
+end

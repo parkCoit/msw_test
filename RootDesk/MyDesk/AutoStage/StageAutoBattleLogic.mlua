@@ -1,11 +1,11 @@
 @Logic
 script StageAutoBattleLogic extends Logic
 
-	property number AutoMoveSpeed = 1.8
+	property number AutoMoveSpeed = 1.0
 
 	property number AttackCooldown = 0.4
 
-	property number Stage2TriggerX = -8.6
+	property number Stage2TriggerX = 8.6
 
 	property number Stage2SpawnY = 0.4
 
@@ -18,6 +18,9 @@ script StageAutoBattleLogic extends Logic
 
 	@Sync
 	property boolean Stage2Cleared = false
+
+	@Sync
+	property boolean AutoBattleEnabled = false
 
 	@HideFromInspector
 	property number AttackTimer = 0
@@ -37,6 +40,9 @@ script StageAutoBattleLogic extends Logic
 	@HideFromInspector
 	property boolean LoggedStage2SpawnRequest = false
 
+	@HideFromInspector
+	property boolean LoggedAutoBattleToggle = false
+
 	@ExecSpace("ClientOnly")
 	method void OnBeginPlay()
 		-- Logs that the stage auto-battle controller was loaded on the client.
@@ -45,7 +51,7 @@ script StageAutoBattleLogic extends Logic
 
 	@ExecSpace("ClientOnly")
 	method void OnUpdate(number delta)
-		-- Moves the local player left and drives stage-specific auto attacks and Stage 2 spawn requests.
+		-- Moves the local player right and drives stage-specific auto attacks and Stage 2 spawn requests.
 		local player = _UserService.LocalPlayer
 		if isvalid(player) == false then
 			return
@@ -57,6 +63,11 @@ script StageAutoBattleLogic extends Logic
 			return
 		end
 
+		if self.AutoBattleEnabled == false then
+			self:StopPlayer(player)
+			return
+		end
+
 		if self.Stage2Cleared then
 			self:StopPlayer(player)
 			return
@@ -64,13 +75,19 @@ script StageAutoBattleLogic extends Logic
 
 		if self.WasActive == false then
 			if self.LoggedAutoStart == false then
-				log("[StageAutoBattle] started moving left and auto-attacking")
+				log("[StageAutoBattle] started moving right and auto-attacking")
 				self.LoggedAutoStart = true
 			end
 			self.WasActive = true
 		end
 
-		self:MovePlayerLeft(player, delta)
+		local playerController = player.PlayerControllerComponent
+		if isvalid(playerController) then
+			playerController.LookDirectionX = 1
+			playerController.AlwaysMovingState = true
+		end
+
+		self:MovePlayerRight(player, delta)
 
 		if self:HasAliveStageMonster(1) then
 			self:TickAutoAttack(delta, 1)
@@ -84,7 +101,7 @@ script StageAutoBattleLogic extends Logic
 
 		if self.Stage2Spawned == false then
 			local pos = player.TransformComponent.WorldPosition
-			if pos.x <= self.Stage2TriggerX then
+			if pos.x >= self.Stage2TriggerX then
 				if self.LoggedStage2SpawnRequest == false then
 					log("[StageAutoBattle] Stage 2 trigger reached")
 					self.LoggedStage2SpawnRequest = true
@@ -105,12 +122,29 @@ script StageAutoBattleLogic extends Logic
 		end
 	end
 
-	method void MovePlayerLeft(Entity player, number delta)
-		-- Applies continuous left movement through MovementComponent.
+	method void SetAutoBattleEnabled(boolean enabled)
+		-- Enables or disables the automatic hunting loop.
+		self.AutoBattleEnabled = enabled
+		self.LoggedAutoBattleToggle = false
+		log("[StageAutoBattle] auto battle enabled = " .. tostring(enabled))
+	end
+
+	method void ToggleAutoBattle()
+		-- Toggles the automatic hunting loop.
+		self:SetAutoBattleEnabled(not self.AutoBattleEnabled)
+	end
+
+	method boolean IsAutoBattleEnabled()
+		-- Returns the current auto battle state.
+		return self.AutoBattleEnabled
+	end
+
+	method void MovePlayerRight(Entity player, number delta)
+		-- Applies continuous right movement through MovementComponent.
 		local movement = player.MovementComponent
 		if isvalid(movement) then
 			movement.InputSpeed = self.AutoMoveSpeed
-			movement:MoveToDirection(Vector2(-1, 0), delta)
+			movement:MoveToDirection(Vector2(1, 0), delta)
 		end
 	end
 
@@ -120,6 +154,12 @@ script StageAutoBattleLogic extends Logic
 		if isvalid(movement) then
 			movement:Stop()
 		end
+
+		local playerController = player.PlayerControllerComponent
+		if isvalid(playerController) then
+			playerController.AlwaysMovingState = false
+		end
+
 		self.WasActive = false
 	end
 
@@ -196,18 +236,13 @@ script StageAutoBattleLogic extends Logic
 			return
 		end
 
-		local target = self:FindNearestStageMonster(player, stage)
 		local playerController = player.PlayerControllerComponent
 		if isvalid(playerController) then
-			playerController.LookDirectionX = -1
-			if isvalid(target) then
-				local playerPos = player.TransformComponent.WorldPosition
-				local targetPos = target.TransformComponent.WorldPosition
-				if targetPos.x > playerPos.x then
-					playerController.LookDirectionX = 1
-				end
-			end
+			playerController.LookDirectionX = 1
+			playerController.AlwaysMovingState = true
 		end
+
+		local target = self:FindNearestStageMonster(player, stage)
 
 		local state = player.StateComponent
 		if isvalid(state) then
@@ -248,7 +283,7 @@ script StageAutoBattleLogic extends Logic
 
 		self.Stage2Spawned = true
 		for i = 1, self.Stage2MonsterCount do
-			local x = -8.2 + (i - 1) * 1.2
+			local x = 8.2 + (i - 1) * 1.2
 			local name = "Stage2Monster0" .. tostring(i)
 			local spawned = _SpawnService:SpawnByModelId(self.Stage2MonsterModelId, name, Vector3(x, self.Stage2SpawnY, 0), map)
 			if isvalid(spawned) == false then
