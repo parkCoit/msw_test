@@ -6360,6 +6360,152 @@
         }
       },
       {
+        "id": "7d2b9f0d-8f4d-4a2a-9a1c-2e4c8d3f4e21",
+        "path": "/maps/map01/RightEdgePortal",
+        "componentNames": "MOD.Core.TransformComponent,MOD.Core.SpriteRendererComponent,MOD.Core.PortalComponent",
+        "jsonString": {
+          "name": "RightEdgePortal",
+          "path": "/maps/map01/RightEdgePortal",
+          "nameEditable": true,
+          "enable": true,
+          "visible": true,
+          "localize": false,
+          "displayOrder": 4,
+          "pathConstraints": "///",
+          "revision": 0,
+          "modelId": "mapobject",
+          "@components": [
+            {
+              "@type": "MOD.Core.TransformComponent",
+              "Position": {
+                "x": 6.8,
+                "y": 0,
+                "z": 0
+              },
+              "QuaternionRotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "Scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.SpriteRendererComponent",
+              "SpriteRUID": "aba58d2139ca4736bab39f6b4c39aa37",
+              "Color": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+              },
+              "DrawMode": 0,
+              "FlipX": false,
+              "FlipY": false,
+              "PlayRate": 1,
+              "OrderInLayer": 20,
+              "StartFrameIndex": 0,
+              "EndFrameIndex": 2147483647,
+              "Enable": true,
+              "SortingLayer": "MapLayer0",
+              "TiledSize": {
+                "x": 1,
+                "y": 2
+              }
+            },
+            {
+              "@type": "MOD.Core.PortalComponent",
+              "BoxOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "BoxSize": {
+                "x": 1.2,
+                "y": 2
+              },
+              "IsLegacy": false,
+              "PortalEntityRef": {
+                "EntityId": "e8a9d3d1-50cb-4c76-8d36-1d2ad2e9b0a4"
+              },
+              "Enable": true
+            }
+          ],
+          "@version": 1,
+          "origin": {
+            "type": "Model",
+            "entry_id": "mapobject",
+            "sub_entity_id": null,
+            "root_entity_id": "7d2b9f0d-8f4d-4a2a-9a1c-2e4c8d3f4e21",
+            "replaced_model_id": null
+          }
+        }
+      },
+      {
+        "id": "e8a9d3d1-50cb-4c76-8d36-1d2ad2e9b0a4",
+        "path": "/maps/map01/RightEdgePortalDestination",
+        "componentNames": "MOD.Core.TransformComponent,MOD.Core.PortalComponent",
+        "jsonString": {
+          "name": "RightEdgePortalDestination",
+          "path": "/maps/map01/RightEdgePortalDestination",
+          "nameEditable": true,
+          "enable": true,
+          "visible": false,
+          "localize": false,
+          "displayOrder": 5,
+          "pathConstraints": "///",
+          "revision": 0,
+          "modelId": "mapobject",
+          "@components": [
+            {
+              "@type": "MOD.Core.TransformComponent",
+              "Position": {
+                "x": 8,
+                "y": 0,
+                "z": 0
+              },
+              "QuaternionRotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "Scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.PortalComponent",
+              "BoxOffset": {
+                "x": 0,
+                "y": 0
+              },
+              "BoxSize": {
+                "x": 1.2,
+                "y": 2
+              },
+              "IsLegacy": false,
+              "Enable": true
+            }
+          ],
+          "@version": 1,
+          "origin": {
+            "type": "Model",
+            "entry_id": "mapobject",
+            "sub_entity_id": null,
+            "root_entity_id": "e8a9d3d1-50cb-4c76-8d36-1d2ad2e9b0a4",
+            "replaced_model_id": null
+          }
+        }
+      },
+      {
         "id": "d3190b87-0ba1-46e7-a7e6-5bd2fcf41798",
         "path": "/maps/map01/Stage1Monster01",
         "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.RigidbodyComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack",
