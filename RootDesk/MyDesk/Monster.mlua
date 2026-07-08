@@ -23,18 +23,229 @@ script Monster extends Component
 	@Sync
 	property number DestroyDelay = 0.6
 
+	@Sync
+	property number LookDirectionX = -1
+
+	property number WanderSpeed = 0.45
+
+	property number ChaseSpeed = 0.8
+
+	property number DetectRange = 2.8
+
+	property number AttackRange = 0.9
+
+	property number RoamRange = 2.4
+
+	property number MinWanderHold = 0.5
+
+	property number MaxWanderHold = 1.3
+
+	property number PauseDuration = 0.5
+
+	property number ChaseRetargetCooldown = 0.35
+
+	property number AggroDuration = 5.0
+
 	property string DamageSkinRUID = "02c22d93421b4038b3c413b3e40b57ec"
 
+	@HideFromInspector
+	property number WanderTimer = 0
+
+	@HideFromInspector
+	property number SpawnX = 0
+
+	@HideFromInspector
+	property number MoveDirectionX = -1
+
+	@HideFromInspector
+	property boolean LoggedAIStart = false
+
+	@HideFromInspector
+	property boolean LoggedAggro = false
+
+	@HideFromInspector
+	property number PauseTimer = 0
+
+	@HideFromInspector
+	property number ChaseRetargetTimer = 0
+
+	@HideFromInspector
+	property boolean IsMovementPaused = false
+
+	@HideFromInspector
+	property number AggroTimer = 0
+
+	@HideFromInspector
+	property string AggroTargetUserId = ""
+
+	method void SetFacingDirection(number directionX)
+		self.LookDirectionX = directionX
+		self.MoveDirectionX = directionX
+
+		local sprite = self.Entity.SpriteRendererComponent
+		if isvalid(sprite) then
+			sprite.FlipX = directionX > 0
+		end
+	end
+
+	@ExecSpace("ServerOnly")
 	method void OnBeginPlay()
 		-- Initialize HP and apply the project-wide attacker damage skin for any
 		-- monster that has a DamageSkinSettingComponent. DamageSkinId is a
 		-- DataRef, not a string — must wrap with DataRef(...).
 		self.Hp = self.MaxHp
+		self.SpawnX = self.Entity.TransformComponent.WorldPosition.x
+		if _UtilLogic:RandomDouble() < 0.5 then
+			self.MoveDirectionX = -1
+		else
+			self.MoveDirectionX = 1
+		end
+		self:SetFacingDirection(self.MoveDirectionX)
+		self.WanderTimer = self:NextWanderHoldTime()
+		self.PauseTimer = 0
+		self.ChaseRetargetTimer = 0
+		self.IsMovementPaused = false
+		self.AggroTimer = 0
+		self.AggroTargetUserId = ""
 		
 		local skinSetting = self.Entity.DamageSkinSettingComponent
 		if isvalid(skinSetting) then
 			skinSetting.DamageSkinId = DataRef(self.DamageSkinRUID)
 		end
+
+		local chase = self.Entity.AIChaseComponent
+		if isvalid(chase) then
+			chase.Enable = false
+		end
+
+		if self.LoggedAIStart == false then
+			log("[MonsterAI] begin " .. self.Entity.Name)
+			self.LoggedAIStart = true
+		end
+	end
+
+	@ExecSpace("ServerOnly")
+	method void OnUpdate(number delta)
+		if self.IsDead then
+			return
+		end
+
+		local body = self.Entity.RigidbodyComponent
+		local transform = self.Entity.TransformComponent
+		local moveVelocityY = 0
+		if isvalid(body) then
+			moveVelocityY = body.MoveVelocity.y
+		end
+
+		if self.IsMovementPaused then
+			if isvalid(body) then
+				body.MoveVelocity = Vector2(0, moveVelocityY)
+			end
+
+			self.PauseTimer = self.PauseTimer - delta
+			if self.PauseTimer <= 0 then
+				self.IsMovementPaused = false
+				self.WanderTimer = self:NextWanderHoldTime()
+				self.ChaseRetargetTimer = 0
+			end
+
+			return
+		end
+
+		self.AggroTimer = self.AggroTimer - delta
+		if self.AggroTimer > 0 and self.AggroTargetUserId ~= "" then
+			local aggroTarget = _UserService:GetUserEntityByUserId(self.AggroTargetUserId)
+			if isvalid(aggroTarget) then
+				local playerPos = aggroTarget.TransformComponent.WorldPosition
+				local monsterPos = transform.WorldPosition
+				local dx = playerPos.x - monsterPos.x
+				local dy = playerPos.y - monsterPos.y
+				local absDx = math.abs(dx)
+				local absDy = math.abs(dy)
+
+				if absDy <= 1.2 then
+					self.WanderTimer = self:NextWanderHoldTime()
+					self.ChaseRetargetTimer = self.ChaseRetargetTimer - delta
+					if self.ChaseRetargetTimer <= 0 then
+						self:SetFacingDirection(dx >= 0 and 1 or -1)
+						self.ChaseRetargetTimer = self.ChaseRetargetCooldown
+					end
+
+					if self.LoggedAggro == false then
+						log("[MonsterAI] aggro " .. self.Entity.Name)
+						self.LoggedAggro = true
+					end
+
+					if isvalid(body) then
+						body.MoveVelocity = Vector2(self.LookDirectionX * self.ChaseSpeed, moveVelocityY)
+					end
+
+					return
+				end
+			end
+		end
+
+		self.AggroTargetUserId = ""
+		self.LoggedAggro = false
+		self.WanderTimer = self.WanderTimer - delta
+		self.ChaseRetargetTimer = 0
+		local monsterPos = transform.WorldPosition
+		if self.WanderTimer <= 0 then
+			if _UtilLogic:RandomDouble() < 0.5 then
+				self.MoveDirectionX = -1
+			else
+				self.MoveDirectionX = 1
+			end
+			local offsetFromSpawn = monsterPos.x - self.SpawnX
+			if offsetFromSpawn > self.RoamRange then
+				self.MoveDirectionX = -1
+			elseif offsetFromSpawn < -self.RoamRange then
+				self.MoveDirectionX = 1
+			end
+			self.WanderTimer = self:NextWanderHoldTime()
+			self.PauseTimer = self.PauseDuration
+			self.IsMovementPaused = true
+			if isvalid(body) then
+				body.MoveVelocity = Vector2(0, moveVelocityY)
+			end
+			return
+		end
+
+		self:SetFacingDirection(self.MoveDirectionX)
+		if isvalid(body) then
+			body.MoveVelocity = Vector2(self.MoveDirectionX * self.WanderSpeed, moveVelocityY)
+		end
+	end
+
+	method number NextWanderHoldTime()
+		return self.MinWanderHold + (_UtilLogic:RandomDouble() * (self.MaxWanderHold - self.MinWanderHold))
+	end
+
+	method Entity FindNearestPlayer()
+		local mapName = self.Entity.CurrentMapName
+		if mapName == nil or mapName == "" then
+			return nil
+		end
+
+		local users = _UserService:GetUsersByMapName(mapName)
+		local monsterPos = self.Entity.TransformComponent.WorldPosition
+		local nearest = nil
+		local nearestDist = 999999
+
+		for _, player in ipairs(users) do
+			if isvalid(player) then
+				local playerPos = player.TransformComponent.WorldPosition
+				local dx = playerPos.x - monsterPos.x
+				local dy = playerPos.y - monsterPos.y
+				local dist = dx * dx + dy * dy
+				if dist < nearestDist then
+					nearest = player
+					nearestDist = dist
+				end
+			end
+		end
+
+		return nearest
 	end
 
 	@ExecSpace("ServerOnly")
@@ -85,6 +296,13 @@ script Monster extends Component
 		-- local IsCritical = event.IsCritical
 		local TotalDamage = event.TotalDamage
 		--------------------------------------------------------
+
+		local attacker = event.AttackerEntity
+		if isvalid(attacker) and isvalid(attacker.PlayerComponent) then
+			self.AggroTargetUserId = attacker.PlayerComponent.UserId
+			self.AggroTimer = self.AggroDuration
+			self.ChaseRetargetTimer = 0
+		end
 		
 		local originalHp = self.Hp
 		local effectiveDamage = math.max(TotalDamage - self.Defense, 1)

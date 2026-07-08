@@ -31,15 +31,15 @@
           "@components": [
             {
               "@type": "MOD.Core.MapComponent",
-              "AirAccelerationXFactor": 1,
-              "AirDecelerationXFactor": 1,
-              "FallSpeedMaxXFactor": 1,
-              "FallSpeedMaxYFactor": 1,
-              "Gravity": 1,
+              "AirAccelerationXFactor": 1.0,
+              "AirDecelerationXFactor": 1.0,
+              "FallSpeedMaxXFactor": 1.0,
+              "FallSpeedMaxYFactor": 1.0,
+              "Gravity": 1.0,
               "IsInstanceMap": false,
               "TileMapMode": 0,
-              "WalkAccelerationFactor": 1,
-              "WalkDrag": 1,
+              "WalkAccelerationFactor": 1.0,
+              "WalkDrag": 1.0,
               "Enable": true
             },
             {
@@ -47,1070 +47,16 @@
               "FootholdsByLayer": {
                 "1": [
                   {
-                    "Length": 1.29000092,
-                    "NextFootholdId": 2,
-                    "PreviousFootholdId": 27,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 1,
-                    "StartPoint": {
-                      "x": -8.940001,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": -7.64999962,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.8999996,
-                    "NextFootholdId": 3,
-                    "PreviousFootholdId": 1,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 2,
-                    "StartPoint": {
-                      "x": -7.64999962,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": -6.75,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.8999996,
-                    "NextFootholdId": 4,
-                    "PreviousFootholdId": 2,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 3,
-                    "StartPoint": {
-                      "x": -6.74999952,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": -5.85,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.8999996,
-                    "NextFootholdId": 5,
-                    "PreviousFootholdId": 3,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 4,
-                    "StartPoint": {
-                      "x": -5.84999943,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": -4.95,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.8999996,
-                    "NextFootholdId": 6,
-                    "PreviousFootholdId": 4,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 5,
-                    "StartPoint": {
-                      "x": -4.95,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": -4.05,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.900000334,
-                    "NextFootholdId": 7,
-                    "PreviousFootholdId": 5,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 6,
-                    "StartPoint": {
-                      "x": -4.05,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": -3.14999986,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.9000001,
-                    "NextFootholdId": 8,
-                    "PreviousFootholdId": 6,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 7,
-                    "StartPoint": {
-                      "x": -3.14999986,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": -2.24999976,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.9,
-                    "NextFootholdId": 9,
-                    "PreviousFootholdId": 7,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 8,
-                    "StartPoint": {
-                      "x": -2.24999976,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": -1.34999979,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.9000001,
-                    "NextFootholdId": 10,
-                    "PreviousFootholdId": 8,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 9,
-                    "StartPoint": {
-                      "x": -1.35,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": -0.449999958,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.9,
-                    "NextFootholdId": 11,
-                    "PreviousFootholdId": 9,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 10,
-                    "StartPoint": {
-                      "x": -0.45,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": 0.449999958,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.9,
-                    "NextFootholdId": 12,
-                    "PreviousFootholdId": 10,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 11,
-                    "StartPoint": {
-                      "x": 0.450000018,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": 1.35,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.9000002,
-                    "NextFootholdId": 13,
-                    "PreviousFootholdId": 11,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 12,
-                    "StartPoint": {
-                      "x": 1.34999979,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": 2.25,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.9000001,
-                    "NextFootholdId": 14,
-                    "PreviousFootholdId": 12,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 13,
-                    "StartPoint": {
-                      "x": 2.24999976,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": 3.14999986,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.899999857,
-                    "NextFootholdId": 15,
-                    "PreviousFootholdId": 13,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 14,
-                    "StartPoint": {
-                      "x": 3.14999986,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": 4.04999971,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.8999996,
-                    "NextFootholdId": 16,
-                    "PreviousFootholdId": 14,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 15,
-                    "StartPoint": {
-                      "x": 4.05,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": 4.95,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.8999996,
-                    "NextFootholdId": 17,
-                    "PreviousFootholdId": 15,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 16,
-                    "StartPoint": {
-                      "x": 4.95,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": 5.84999943,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.8999996,
-                    "NextFootholdId": 18,
-                    "PreviousFootholdId": 16,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 17,
-                    "StartPoint": {
-                      "x": 5.85,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": 6.74999952,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 1.289999,
-                    "NextFootholdId": 19,
-                    "PreviousFootholdId": 17,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 18,
-                    "StartPoint": {
-                      "x": 6.75,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": 8.039999,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 1,
-                      "y": 0
-                    }
-                  },
-                  {
-                    "Length": 0.849999964,
-                    "NextFootholdId": 20,
-                    "PreviousFootholdId": 18,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 19,
-                    "StartPoint": {
-                      "x": 8.039999,
-                      "y": -0.0500000119
-                    },
-                    "EndPoint": {
-                      "x": 8.039999,
-                      "y": -0.9
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": -1
-                    }
-                  },
-                  {
-                    "Length": 0.6,
-                    "NextFootholdId": 21,
-                    "PreviousFootholdId": 19,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 20,
-                    "StartPoint": {
-                      "x": 8.039999,
-                      "y": -0.9000001
-                    },
-                    "EndPoint": {
-                      "x": 8.039999,
-                      "y": -1.50000012
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": -1
-                    }
-                  },
-                  {
-                    "Length": 0.6,
-                    "NextFootholdId": 22,
-                    "PreviousFootholdId": 20,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 21,
-                    "StartPoint": {
-                      "x": 8.039999,
-                      "y": -1.50000012
-                    },
-                    "EndPoint": {
-                      "x": 8.039999,
-                      "y": -2.10000014
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": -1
-                    }
-                  },
-                  {
-                    "Length": 0.5999999,
-                    "NextFootholdId": 23,
-                    "PreviousFootholdId": 21,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 22,
-                    "StartPoint": {
-                      "x": 8.039999,
-                      "y": -2.10000014
-                    },
-                    "EndPoint": {
-                      "x": 8.039999,
-                      "y": -2.7
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": -1
-                    }
-                  },
-                  {
-                    "Length": 0.5999999,
-                    "NextFootholdId": 24,
-                    "PreviousFootholdId": 22,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 23,
-                    "StartPoint": {
-                      "x": 8.039999,
-                      "y": -2.7
-                    },
-                    "EndPoint": {
-                      "x": 8.039999,
-                      "y": -3.3
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": -1
-                    }
-                  },
-                  {
-                    "Length": 0.5999999,
-                    "NextFootholdId": 25,
-                    "PreviousFootholdId": 23,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 24,
-                    "StartPoint": {
-                      "x": 8.039999,
-                      "y": -3.30000019
-                    },
-                    "EndPoint": {
-                      "x": 8.039999,
-                      "y": -3.9
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": -1
-                    }
-                  },
-                  {
-                    "Length": 0.600000143,
-                    "NextFootholdId": 26,
-                    "PreviousFootholdId": 24,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 25,
-                    "StartPoint": {
-                      "x": 8.039999,
-                      "y": -3.90000033
-                    },
-                    "EndPoint": {
-                      "x": 8.039999,
-                      "y": -4.50000048
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": -1
-                    }
-                  },
-                  {
-                    "Length": 0.6000004,
-                    "NextFootholdId": 0,
-                    "PreviousFootholdId": 25,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 26,
-                    "StartPoint": {
-                      "x": 8.039999,
-                      "y": -4.5
-                    },
-                    "EndPoint": {
-                      "x": 8.039999,
-                      "y": -5.10000038
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": -1
-                    }
-                  },
-                  {
-                    "Length": 0.849999964,
-                    "NextFootholdId": 1,
-                    "PreviousFootholdId": 28,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 27,
-                    "StartPoint": {
-                      "x": -8.940001,
-                      "y": -0.9
-                    },
-                    "EndPoint": {
-                      "x": -8.940001,
-                      "y": -0.0500000119
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": 1
-                    }
-                  },
-                  {
-                    "Length": 0.6,
-                    "NextFootholdId": 27,
-                    "PreviousFootholdId": 29,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 28,
-                    "StartPoint": {
-                      "x": -8.940001,
-                      "y": -1.50000012
-                    },
-                    "EndPoint": {
-                      "x": -8.940001,
-                      "y": -0.9000001
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": 1
-                    }
-                  },
-                  {
-                    "Length": 0.6,
-                    "NextFootholdId": 28,
-                    "PreviousFootholdId": 30,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 29,
-                    "StartPoint": {
-                      "x": -8.940001,
-                      "y": -2.10000014
-                    },
-                    "EndPoint": {
-                      "x": -8.940001,
-                      "y": -1.50000012
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": 1
-                    }
-                  },
-                  {
-                    "Length": 0.5999999,
-                    "NextFootholdId": 29,
-                    "PreviousFootholdId": 31,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 30,
-                    "StartPoint": {
-                      "x": -8.940001,
-                      "y": -2.7
-                    },
-                    "EndPoint": {
-                      "x": -8.940001,
-                      "y": -2.10000014
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": 1
-                    }
-                  },
-                  {
-                    "Length": 0.5999999,
-                    "NextFootholdId": 30,
-                    "PreviousFootholdId": 32,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 31,
-                    "StartPoint": {
-                      "x": -8.940001,
-                      "y": -3.3
-                    },
-                    "EndPoint": {
-                      "x": -8.940001,
-                      "y": -2.7
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": 1
-                    }
-                  },
-                  {
-                    "Length": 0.5999999,
-                    "NextFootholdId": 31,
-                    "PreviousFootholdId": 33,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 32,
-                    "StartPoint": {
-                      "x": -8.940001,
-                      "y": -3.9
-                    },
-                    "EndPoint": {
-                      "x": -8.940001,
-                      "y": -3.30000019
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": 1
-                    }
-                  },
-                  {
-                    "Length": 0.600000143,
-                    "NextFootholdId": 32,
-                    "PreviousFootholdId": 34,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 33,
-                    "StartPoint": {
-                      "x": -8.940001,
-                      "y": -4.50000048
-                    },
-                    "EndPoint": {
-                      "x": -8.940001,
-                      "y": -3.90000033
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": 1
-                    }
-                  },
-                  {
-                    "Length": 0.6000004,
-                    "NextFootholdId": 33,
-                    "PreviousFootholdId": 0,
-                    "groupID": 1,
-                    "layer": 1,
-                    "sortingLayerName": "MapLayer0",
-                    "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
-                      "isBlockVertical": false,
-                      "isDynamic": false,
-                      "isCustomFoothold": false,
-                      "inertiaOption": 0
-                    },
-                    "OwnerId": "c9a3018a-f6fa-4c4b-b91e-404ac5ce9858",
-                    "Id": 34,
-                    "StartPoint": {
-                      "x": -8.940001,
-                      "y": -5.10000038
-                    },
-                    "EndPoint": {
-                      "x": -8.940001,
-                      "y": -4.5
-                    },
-                    "Variance": {
-                      "x": 0,
-                      "y": 1
-                    }
-                  },
-                  {
                     "Length": 1.27999973,
                     "NextFootholdId": 2,
                     "PreviousFootholdId": 27,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1127,21 +73,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.8999996,
                     "NextFootholdId": 3,
                     "PreviousFootholdId": 1,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1158,21 +104,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.8999996,
                     "NextFootholdId": 4,
                     "PreviousFootholdId": 2,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1189,21 +135,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.8999996,
                     "NextFootholdId": 5,
                     "PreviousFootholdId": 3,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1220,21 +166,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.8999996,
                     "NextFootholdId": 6,
                     "PreviousFootholdId": 4,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1251,21 +197,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.900000334,
                     "NextFootholdId": 7,
                     "PreviousFootholdId": 5,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1282,21 +228,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.9000001,
                     "NextFootholdId": 8,
                     "PreviousFootholdId": 6,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1313,21 +259,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.899999738,
                     "NextFootholdId": 9,
                     "PreviousFootholdId": 7,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1344,21 +290,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.9000001,
                     "NextFootholdId": 10,
                     "PreviousFootholdId": 8,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1375,21 +321,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.9,
                     "NextFootholdId": 11,
                     "PreviousFootholdId": 9,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1406,21 +352,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.9,
                     "NextFootholdId": 12,
                     "PreviousFootholdId": 10,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1437,21 +383,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.9000002,
                     "NextFootholdId": 13,
                     "PreviousFootholdId": 11,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1468,21 +414,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.9000001,
                     "NextFootholdId": 14,
                     "PreviousFootholdId": 12,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1499,21 +445,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.899999857,
                     "NextFootholdId": 15,
                     "PreviousFootholdId": 13,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1530,21 +476,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.8999996,
                     "NextFootholdId": 16,
                     "PreviousFootholdId": 14,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1561,21 +507,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.8999996,
                     "NextFootholdId": 17,
                     "PreviousFootholdId": 15,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1592,21 +538,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.8999996,
                     "NextFootholdId": 18,
                     "PreviousFootholdId": 16,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1623,21 +569,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 1.27999973,
                     "NextFootholdId": 19,
                     "PreviousFootholdId": 17,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1654,21 +600,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 1,
-                      "y": 0
+                      "x": 1.0,
+                      "y": 0.0
                     }
                   },
                   {
                     "Length": 0.859999955,
                     "NextFootholdId": 20,
                     "PreviousFootholdId": 18,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1685,21 +631,21 @@
                       "y": -0.9
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": -1
+                      "x": 0.0,
+                      "y": -1.0
                     }
                   },
                   {
                     "Length": 0.6,
                     "NextFootholdId": 21,
                     "PreviousFootholdId": 19,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1716,21 +662,21 @@
                       "y": -1.50000012
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": -1
+                      "x": 0.0,
+                      "y": -1.0
                     }
                   },
                   {
                     "Length": 0.6,
                     "NextFootholdId": 22,
                     "PreviousFootholdId": 20,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1747,21 +693,21 @@
                       "y": -2.10000014
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": -1
+                      "x": 0.0,
+                      "y": -1.0
                     }
                   },
                   {
                     "Length": 0.5999999,
                     "NextFootholdId": 23,
                     "PreviousFootholdId": 21,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1778,21 +724,21 @@
                       "y": -2.7
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": -1
+                      "x": 0.0,
+                      "y": -1.0
                     }
                   },
                   {
                     "Length": 0.5999999,
                     "NextFootholdId": 24,
                     "PreviousFootholdId": 22,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1809,21 +755,21 @@
                       "y": -3.30000019
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": -1
+                      "x": 0.0,
+                      "y": -1.0
                     }
                   },
                   {
                     "Length": 0.5999999,
                     "NextFootholdId": 25,
                     "PreviousFootholdId": 23,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1840,21 +786,21 @@
                       "y": -3.9
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": -1
+                      "x": 0.0,
+                      "y": -1.0
                     }
                   },
                   {
                     "Length": 0.600000143,
                     "NextFootholdId": 26,
                     "PreviousFootholdId": 24,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1871,21 +817,21 @@
                       "y": -4.50000048
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": -1
+                      "x": 0.0,
+                      "y": -1.0
                     }
                   },
                   {
                     "Length": 0.6000004,
                     "NextFootholdId": 0,
                     "PreviousFootholdId": 25,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1902,21 +848,21 @@
                       "y": -5.10000038
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": -1
+                      "x": 0.0,
+                      "y": -1.0
                     }
                   },
                   {
                     "Length": 0.859999955,
                     "NextFootholdId": 1,
                     "PreviousFootholdId": 28,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1933,21 +879,21 @@
                       "y": -0.04000002
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": 1
+                      "x": 0.0,
+                      "y": 1.0
                     }
                   },
                   {
                     "Length": 0.6,
                     "NextFootholdId": 27,
                     "PreviousFootholdId": 29,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1964,21 +910,21 @@
                       "y": -0.9000001
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": 1
+                      "x": 0.0,
+                      "y": 1.0
                     }
                   },
                   {
                     "Length": 0.6,
                     "NextFootholdId": 28,
                     "PreviousFootholdId": 30,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -1995,21 +941,21 @@
                       "y": -1.50000012
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": 1
+                      "x": 0.0,
+                      "y": 1.0
                     }
                   },
                   {
                     "Length": 0.5999999,
                     "NextFootholdId": 29,
                     "PreviousFootholdId": 31,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -2026,21 +972,21 @@
                       "y": -2.10000014
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": 1
+                      "x": 0.0,
+                      "y": 1.0
                     }
                   },
                   {
                     "Length": 0.5999999,
                     "NextFootholdId": 30,
                     "PreviousFootholdId": 32,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -2057,21 +1003,21 @@
                       "y": -2.70000029
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": 1
+                      "x": 0.0,
+                      "y": 1.0
                     }
                   },
                   {
                     "Length": 0.5999999,
                     "NextFootholdId": 31,
                     "PreviousFootholdId": 33,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -2088,21 +1034,21 @@
                       "y": -3.30000019
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": 1
+                      "x": 0.0,
+                      "y": 1.0
                     }
                   },
                   {
                     "Length": 0.600000143,
                     "NextFootholdId": 32,
                     "PreviousFootholdId": 34,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -2119,21 +1065,21 @@
                       "y": -3.90000033
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": 1
+                      "x": 0.0,
+                      "y": 1.0
                     }
                   },
                   {
                     "Length": 0.6000004,
                     "NextFootholdId": 33,
                     "PreviousFootholdId": 0,
-                    "groupID": 2,
+                    "groupID": 1,
                     "layer": 1,
                     "sortingLayerName": "MapLayer0",
                     "attribute": {
-                      "walk": 1,
-                      "force": 0,
-                      "drag": 1,
+                      "walk": 1.0,
+                      "force": 0.0,
+                      "drag": 1.0,
                       "isBlockVertical": false,
                       "isDynamic": false,
                       "isCustomFoothold": false,
@@ -2150,8 +1096,8 @@
                       "y": -4.5
                     },
                     "Variance": {
-                      "x": 0,
-                      "y": 1
+                      "x": 0.0,
+                      "y": 1.0
                     }
                   }
                 ]
@@ -2259,32 +1205,32 @@
               "Position": {
                 "x": -0.225,
                 "y": -0.15,
-                "z": 1000
+                "z": 1000.0
               },
               "QuaternionRotation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
               },
               "Scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
               },
               "Enable": true
             },
             {
               "@type": "MOD.Core.TileMapComponent",
               "Color": {
-                "r": 1,
-                "g": 1,
-                "b": 1,
-                "a": 1
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
               },
-              "FootholdDrag": 1,
-              "FootholdForce": 0,
-              "FootholdWalkSpeedFactor": 1,
+              "FootholdDrag": 1.0,
+              "FootholdForce": 0.0,
+              "FootholdWalkSpeedFactor": 1.0,
               "IgnoreMapLayerCheck": false,
               "IsOddGridPosition": false,
               "OrderInLayer": 1,
@@ -7352,27 +6298,27 @@
             {
               "@type": "MOD.Core.TransformComponent",
               "Rotation": {
-                "x": 0,
-                "y": 0,
-                "z": 0
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
               },
               "Position": {
-                "x": 0,
-                "y": 0,
+                "x": 0.0,
+                "y": 0.0,
                 "z": 999.999
               },
               "QuaternionRotation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
               },
               "Scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
               },
-              "ZRotation": 0,
+              "ZRotation": 0.0,
               "Enable": true
             },
             {
@@ -7384,20 +6330,20 @@
               "FlipY": false,
               "IgnoreMapLayerCheck": false,
               "OrderInLayer": 0,
-              "PlayRate": 1,
+              "PlayRate": 1.0,
               "RenderSetting": 0,
               "SortingLayer": "Default",
               "SpriteRUID": "8ef238e0d0ca4bb783aca526cff35d11",
               "StartFrameIndex": 0,
               "TiledSize": {
-                "x": 1,
-                "y": 1
+                "x": 1.0,
+                "y": 1.0
               },
               "Color": {
-                "r": 1,
-                "g": 1,
-                "b": 1,
-                "a": 1
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
               },
               "Enable": true
             },
@@ -7412,7 +6358,7 @@
       {
         "id": "d3190b87-0ba1-46e7-a7e6-5bd2fcf41798",
         "path": "/maps/map01/Stage1Monster01",
-        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack,MOD.Core.SideviewbodyComponent",
+        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.RigidbodyComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack",
         "jsonString": {
           "name": "Stage1Monster01",
           "path": "/maps/map01/Stage1Monster01",
@@ -7436,19 +6382,19 @@
               "@type": "MOD.Core.TransformComponent",
               "Position": {
                 "x": 1.2,
-                "y": 0.4,
-                "z": 0
+                "y": 0.0,
+                "z": 0.0
               },
               "QuaternionRotation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
               },
               "Scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
               },
               "Enable": true
             },
@@ -7471,28 +6417,40 @@
               "FlipX": false,
               "FlipY": false,
               "OrderInLayer": 2,
-              "PlayRate": 1,
+              "PlayRate": 1.0,
               "RenderSetting": 0,
               "SortingLayer": "MapLayer0",
               "SpriteRUID": "2fa39477afb34d8cb6412b7fe5085f42",
               "StartFrameIndex": 0,
               "Color": {
-                "r": 1,
-                "g": 1,
-                "b": 1,
-                "a": 1
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.RigidbodyComponent",
+              "MoveVelocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "RealMoveVelocity": {
+                "x": 0.0,
+                "y": 0.0
               },
               "Enable": true
             },
             {
               "@type": "MOD.Core.MovementComponent",
               "InputSpeed": 1.2,
-              "JumpForce": 6,
+              "JumpForce": 6.0,
               "Enable": true
             },
             {
               "@type": "MOD.Core.AIChaseComponent",
-              "DetectionRange": 5,
+              "DetectionRange": 5.0,
               "IsChaseNearPlayer": true,
               "IsLegacy": false,
               "Enable": true
@@ -7509,7 +6467,7 @@
                 "y": 1.35
               },
               "ColliderOffset": {
-                "x": 0,
+                "x": 0.0,
                 "y": 0.68
               },
               "CollisionGroup": {
@@ -7525,33 +6483,25 @@
             {
               "@type": "script.Monster",
               "Enable": true,
-              "MaxHp": 150,
-              "Hp": 150,
+              "MaxHp": 20.0,
+              "Hp": 20.0,
               "RespawnOn": false,
               "IsDead": false,
-              "RespawnDelay": 8,
+              "RespawnDelay": 8.0,
               "DestroyDelay": 0.6
             },
             {
               "@type": "script.MonsterAttack",
               "Enable": true,
-              "AttackInterval": 1,
+              "AttackInterval": 2.0,
               "SpriteSize": {
-                "x": 0,
-                "y": 0
+                "x": 0.0,
+                "y": 0.0
               },
               "PositionOffset": {
-                "x": 0,
-                "y": 0
+                "x": 0.0,
+                "y": 0.0
               }
-            },
-            {
-              "@type": "MOD.Core.SideviewbodyComponent",
-              "MoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "Enable": true
             }
           ],
           "@version": 1
@@ -7560,7 +6510,7 @@
       {
         "id": "1ebe97db-2619-4d2e-9b7c-a8856ea0617a",
         "path": "/maps/map01/Stage1Monster02",
-        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack,MOD.Core.SideviewbodyComponent",
+        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.RigidbodyComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack",
         "jsonString": {
           "name": "Stage1Monster02",
           "path": "/maps/map01/Stage1Monster02",
@@ -7584,19 +6534,19 @@
               "@type": "MOD.Core.TransformComponent",
               "Position": {
                 "x": 2.6,
-                "y": 0.4,
-                "z": 0
+                "y": 0.0,
+                "z": 0.0
               },
               "QuaternionRotation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
               },
               "Scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
               },
               "Enable": true
             },
@@ -7619,23 +6569,35 @@
               "FlipX": false,
               "FlipY": false,
               "OrderInLayer": 2,
-              "PlayRate": 1,
+              "PlayRate": 1.0,
               "RenderSetting": 0,
               "SortingLayer": "MapLayer0",
               "SpriteRUID": "2fa39477afb34d8cb6412b7fe5085f42",
               "StartFrameIndex": 0,
               "Color": {
-                "r": 1,
-                "g": 1,
-                "b": 1,
-                "a": 1
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.RigidbodyComponent",
+              "MoveVelocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "RealMoveVelocity": {
+                "x": 0.0,
+                "y": 0.0
               },
               "Enable": true
             },
             {
               "@type": "MOD.Core.MovementComponent",
               "InputSpeed": 0.9,
-              "JumpForce": 6,
+              "JumpForce": 6.0,
               "Enable": true
             },
             {
@@ -7657,7 +6619,7 @@
                 "y": 1.35
               },
               "ColliderOffset": {
-                "x": 0,
+                "x": 0.0,
                 "y": 0.68
               },
               "CollisionGroup": {
@@ -7673,35 +6635,27 @@
             {
               "@type": "script.Monster",
               "Enable": true,
-              "MaxHp": 120,
-              "Hp": 120,
+              "MaxHp": 20.0,
+              "Hp": 20.0,
+              "Defense": 2.0,
               "RespawnOn": false,
               "IsDead": false,
-              "RespawnDelay": 8,
-              "DestroyDelay": 0.6,
-              "Defense": 2
+              "RespawnDelay": 8.0,
+              "DestroyDelay": 0.6
             },
             {
               "@type": "script.MonsterAttack",
               "Enable": true,
-              "AttackInterval": 1.1,
+              "AttackInterval": 2.0,
+              "AttackDamage": 1,
               "SpriteSize": {
-                "x": 0,
-                "y": 0
+                "x": 0.0,
+                "y": 0.0
               },
               "PositionOffset": {
-                "x": 0,
-                "y": 0
-              },
-              "AttackDamage": 10
-            },
-            {
-              "@type": "MOD.Core.SideviewbodyComponent",
-              "MoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "Enable": true
+                "x": 0.0,
+                "y": 0.0
+              }
             }
           ],
           "@version": 1
@@ -7710,7 +6664,7 @@
       {
         "id": "8e05bb6f-060a-4475-9474-ce971930453f",
         "path": "/maps/map01/Stage1Monster03",
-        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack,MOD.Core.SideviewbodyComponent",
+        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.RigidbodyComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack",
         "jsonString": {
           "name": "Stage1Monster03",
           "path": "/maps/map01/Stage1Monster03",
@@ -7733,20 +6687,20 @@
             {
               "@type": "MOD.Core.TransformComponent",
               "Position": {
-                "x": 4,
-                "y": 0.4,
-                "z": 0
+                "x": 4.0,
+                "y": 0.0,
+                "z": 0.0
               },
               "QuaternionRotation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
               },
               "Scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
               },
               "Enable": true
             },
@@ -7769,28 +6723,40 @@
               "FlipX": false,
               "FlipY": false,
               "OrderInLayer": 2,
-              "PlayRate": 1,
+              "PlayRate": 1.0,
               "RenderSetting": 0,
               "SortingLayer": "MapLayer0",
               "SpriteRUID": "2fa39477afb34d8cb6412b7fe5085f42",
               "StartFrameIndex": 0,
               "Color": {
-                "r": 1,
-                "g": 1,
-                "b": 1,
-                "a": 1
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.RigidbodyComponent",
+              "MoveVelocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "RealMoveVelocity": {
+                "x": 0.0,
+                "y": 0.0
               },
               "Enable": true
             },
             {
               "@type": "MOD.Core.MovementComponent",
               "InputSpeed": 1.2,
-              "JumpForce": 6,
+              "JumpForce": 6.0,
               "Enable": true
             },
             {
               "@type": "MOD.Core.AIChaseComponent",
-              "DetectionRange": 5,
+              "DetectionRange": 5.0,
               "IsChaseNearPlayer": true,
               "IsLegacy": false,
               "Enable": true
@@ -7807,7 +6773,7 @@
                 "y": 1.35
               },
               "ColliderOffset": {
-                "x": 0,
+                "x": 0.0,
                 "y": 0.68
               },
               "CollisionGroup": {
@@ -7823,33 +6789,25 @@
             {
               "@type": "script.Monster",
               "Enable": true,
-              "MaxHp": 150,
-              "Hp": 150,
+              "MaxHp": 20.0,
+              "Hp": 20.0,
               "RespawnOn": false,
               "IsDead": false,
-              "RespawnDelay": 8,
+              "RespawnDelay": 8.0,
               "DestroyDelay": 0.6
             },
             {
               "@type": "script.MonsterAttack",
               "Enable": true,
-              "AttackInterval": 1,
+              "AttackInterval": 2.0,
               "SpriteSize": {
-                "x": 0,
-                "y": 0
+                "x": 0.0,
+                "y": 0.0
               },
               "PositionOffset": {
-                "x": 0,
-                "y": 0
+                "x": 0.0,
+                "y": 0.0
               }
-            },
-            {
-              "@type": "MOD.Core.SideviewbodyComponent",
-              "MoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "Enable": true
             }
           ],
           "@version": 1
@@ -7858,7 +6816,7 @@
       {
         "id": "0289285f-b083-48d3-93ae-a1f05672313e",
         "path": "/maps/map01/Stage1Monster04",
-        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack,MOD.Core.SideviewbodyComponent",
+        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.RigidbodyComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack",
         "jsonString": {
           "name": "Stage1Monster04",
           "path": "/maps/map01/Stage1Monster04",
@@ -7882,19 +6840,19 @@
               "@type": "MOD.Core.TransformComponent",
               "Position": {
                 "x": 5.4,
-                "y": 0.4,
-                "z": 0
+                "y": 0.0,
+                "z": 0.0
               },
               "QuaternionRotation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
               },
               "Scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
               },
               "Enable": true
             },
@@ -7917,23 +6875,35 @@
               "FlipX": false,
               "FlipY": false,
               "OrderInLayer": 2,
-              "PlayRate": 1,
+              "PlayRate": 1.0,
               "RenderSetting": 0,
               "SortingLayer": "MapLayer0",
               "SpriteRUID": "2fa39477afb34d8cb6412b7fe5085f42",
               "StartFrameIndex": 0,
               "Color": {
-                "r": 1,
-                "g": 1,
-                "b": 1,
-                "a": 1
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.RigidbodyComponent",
+              "MoveVelocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "RealMoveVelocity": {
+                "x": 0.0,
+                "y": 0.0
               },
               "Enable": true
             },
             {
               "@type": "MOD.Core.MovementComponent",
               "InputSpeed": 0.9,
-              "JumpForce": 6,
+              "JumpForce": 6.0,
               "Enable": true
             },
             {
@@ -7955,7 +6925,7 @@
                 "y": 1.35
               },
               "ColliderOffset": {
-                "x": 0,
+                "x": 0.0,
                 "y": 0.68
               },
               "CollisionGroup": {
@@ -7971,35 +6941,27 @@
             {
               "@type": "script.Monster",
               "Enable": true,
-              "MaxHp": 120,
-              "Hp": 120,
+              "MaxHp": 20.0,
+              "Hp": 20.0,
+              "Defense": 2.0,
               "RespawnOn": false,
               "IsDead": false,
-              "RespawnDelay": 8,
-              "DestroyDelay": 0.6,
-              "Defense": 2
+              "RespawnDelay": 8.0,
+              "DestroyDelay": 0.6
             },
             {
               "@type": "script.MonsterAttack",
               "Enable": true,
-              "AttackInterval": 1.1,
+              "AttackInterval": 2.0,
+              "AttackDamage": 1,
               "SpriteSize": {
-                "x": 0,
-                "y": 0
+                "x": 0.0,
+                "y": 0.0
               },
               "PositionOffset": {
-                "x": 0,
-                "y": 0
-              },
-              "AttackDamage": 10
-            },
-            {
-              "@type": "MOD.Core.SideviewbodyComponent",
-              "MoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "Enable": true
+                "x": 0.0,
+                "y": 0.0
+              }
             }
           ],
           "@version": 1
@@ -8008,7 +6970,7 @@
       {
         "id": "37cc6806-159a-48a6-9b06-3b95242002d6",
         "path": "/maps/map01/Stage1Monster05",
-        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack,MOD.Core.SideviewbodyComponent",
+        "componentNames": "MOD.Core.TransformComponent,MOD.Core.StateAnimationComponent,MOD.Core.SpriteRendererComponent,MOD.Core.RigidbodyComponent,MOD.Core.MovementComponent,MOD.Core.AIChaseComponent,MOD.Core.StateComponent,MOD.Core.HitComponent,MOD.Core.DamageSkinSpawnerComponent,script.Monster,script.MonsterAttack",
         "jsonString": {
           "name": "Stage1Monster05",
           "path": "/maps/map01/Stage1Monster05",
@@ -8032,19 +6994,19 @@
               "@type": "MOD.Core.TransformComponent",
               "Position": {
                 "x": 6.8,
-                "y": 0.4,
-                "z": 0
+                "y": 0.0,
+                "z": 0.0
               },
               "QuaternionRotation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
               },
               "Scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
               },
               "Enable": true
             },
@@ -8067,28 +7029,40 @@
               "FlipX": false,
               "FlipY": false,
               "OrderInLayer": 2,
-              "PlayRate": 1,
+              "PlayRate": 1.0,
               "RenderSetting": 0,
               "SortingLayer": "MapLayer0",
               "SpriteRUID": "2fa39477afb34d8cb6412b7fe5085f42",
               "StartFrameIndex": 0,
               "Color": {
-                "r": 1,
-                "g": 1,
-                "b": 1,
-                "a": 1
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "Enable": true
+            },
+            {
+              "@type": "MOD.Core.RigidbodyComponent",
+              "MoveVelocity": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "RealMoveVelocity": {
+                "x": 0.0,
+                "y": 0.0
               },
               "Enable": true
             },
             {
               "@type": "MOD.Core.MovementComponent",
               "InputSpeed": 1.2,
-              "JumpForce": 6,
+              "JumpForce": 6.0,
               "Enable": true
             },
             {
               "@type": "MOD.Core.AIChaseComponent",
-              "DetectionRange": 5,
+              "DetectionRange": 5.0,
               "IsChaseNearPlayer": true,
               "IsLegacy": false,
               "Enable": true
@@ -8105,7 +7079,7 @@
                 "y": 1.35
               },
               "ColliderOffset": {
-                "x": 0,
+                "x": 0.0,
                 "y": 0.68
               },
               "CollisionGroup": {
@@ -8121,33 +7095,25 @@
             {
               "@type": "script.Monster",
               "Enable": true,
-              "MaxHp": 150,
-              "Hp": 150,
+              "MaxHp": 20.0,
+              "Hp": 20.0,
               "RespawnOn": false,
               "IsDead": false,
-              "RespawnDelay": 8,
+              "RespawnDelay": 8.0,
               "DestroyDelay": 0.6
             },
             {
               "@type": "script.MonsterAttack",
               "Enable": true,
-              "AttackInterval": 1,
+              "AttackInterval": 2.0,
               "SpriteSize": {
-                "x": 0,
-                "y": 0
+                "x": 0.0,
+                "y": 0.0
               },
               "PositionOffset": {
-                "x": 0,
-                "y": 0
+                "x": 0.0,
+                "y": 0.0
               }
-            },
-            {
-              "@type": "MOD.Core.SideviewbodyComponent",
-              "MoveVelocity": {
-                "x": 0,
-                "y": 0
-              },
-              "Enable": true
             }
           ],
           "@version": 1

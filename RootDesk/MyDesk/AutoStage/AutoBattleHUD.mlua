@@ -5,6 +5,8 @@ script AutoBattleHUD extends Logic
 
 	property TextComponent toggleLabel = "8e2cc061-52e2-4a8a-8e27-ec6a519699c8"
 
+	property TextComponent countdownLabel = "00e731a7-6782-43d4-b39a-426697402728"
+
 	@HideFromInspector
 	property any clickHandler = nil
 
@@ -42,6 +44,11 @@ script AutoBattleHUD extends Logic
 		end
 	end
 
+	@ExecSpace("ClientOnly")
+	method void OnUpdate(number delta)
+		self:UpdateCountdownLabel()
+	end
+
 	method void ApplyState(boolean enabled)
 		-- Applies the current toggle state to the button label.
 		if isvalid(self.toggleLabel) then
@@ -51,6 +58,20 @@ script AutoBattleHUD extends Logic
 				self.toggleLabel.Text = "AUTO OFF"
 			end
 		end
+	end
+
+	method void UpdateCountdownLabel()
+		if isvalid(self.countdownLabel) == false then
+			return
+		end
+
+		if _StageAutoBattleLogic == nil or _StageAutoBattleLogic.Stage2CountdownActive == false then
+			self.countdownLabel.Text = ""
+			return
+		end
+
+		local remaining = math.max(0, math.ceil(_StageAutoBattleLogic.Stage2CountdownRemaining))
+		self.countdownLabel.Text = tostring(remaining)
 	end
 
 	@ExecSpace("ClientOnly")

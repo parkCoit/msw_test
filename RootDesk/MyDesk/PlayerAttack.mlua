@@ -1,9 +1,9 @@
 @Component
 script PlayerAttack extends AttackComponent
 
-	property integer BaseDamage = 50
+	property integer BaseDamage = 10
 
-	property integer StageDamageBonus = 25
+	property integer StageDamageBonus = 0
 
 	@HideFromInspector
 	property integer CurrentStage = 1

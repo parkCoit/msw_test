@@ -2,10 +2,22 @@
 script PlayerHit extends HitComponent
 
 	@MinValue(0)
-	property number ImmuneCooldown = 1
+	property number ImmuneCooldown = 2
+
+	property integer TestMaxHp = 1000000
 
 	@HideFromInspector
 	property number LastHitTime = 0
+
+	@ExecSpace("ServerOnly")
+	method void OnBeginPlay()
+		local player = self.Entity.PlayerComponent
+		if isvalid(player) then
+			player.MaxHp = self.TestMaxHp
+			player.Hp = self.TestMaxHp
+			log("[PlayerHit] forced player hp = " .. tostring(self.TestMaxHp))
+		end
+	end
 
 	method boolean IsHitTarget(string attackInfo)
 		local currentTime = _UtilLogic.ElapsedSeconds

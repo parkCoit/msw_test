@@ -21,7 +21,7 @@
         "MOD.Core.TransformComponent",
         "MOD.Core.StateAnimationComponent",
         "MOD.Core.SpriteRendererComponent",
-        "MOD.Core.SideviewbodyComponent",
+        "MOD.Core.RigidbodyComponent",
         "MOD.Core.MovementComponent",
         "MOD.Core.AIChaseComponent",
         "MOD.Core.StateComponent",
@@ -42,7 +42,7 @@
           "Value": {
             "$type": "MOD.Core.MODVector3, MOD.Core",
             "x": 0.0,
-            "y": 0.4,
+            "y": 0.0,
             "z": 0.0
           }
         },
@@ -464,7 +464,7 @@
             "$type": "MODNativeType",
             "type": "System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
           },
-          "Value": 0.95
+          "Value": 2.0
         }
       ],
       "EventLinks": [],

@@ -2,9 +2,9 @@
 script MonsterAttack extends AttackComponent
 
 	@MinValue(0)
-	property number AttackInterval = 0.03
+	property number AttackInterval = 2.0
 
-	property integer AttackDamage = 10
+	property integer AttackDamage = 1
 
 	@HideFromInspector
 	property any Shape = nil
@@ -46,6 +46,11 @@ script MonsterAttack extends AttackComponent
 	method void AttackNear()
 		-- Attacks players inside the monster sprite bounds.
 		local transformComponent = self.Entity.TransformComponent
+		local monster = self.Entity.Monster
+		local lookDirectionX = 1
+		if isvalid(monster) and monster.LookDirectionX < 0 then
+			lookDirectionX = -1
+		end
 		
 		if isvalid(transformComponent) then
 			local worldPosition = transformComponent.WorldPosition
@@ -54,11 +59,11 @@ script MonsterAttack extends AttackComponent
 			local radian = math.rad(transformComponent.ZRotation)
 			local offsetX = math.cos(radian) * self.PositionOffset.x * scaleX - math.sin(radian) * self.PositionOffset.y * scaleY
 			local offsetY = math.sin(radian) * self.PositionOffset.x * scaleX + math.cos(radian) * self.PositionOffset.y * scaleY
-			self.Shape.Size = Vector2(self.SpriteSize.x * math.abs(scaleX), self.SpriteSize.y * math.abs(scaleY))
-			self.Shape.Position = Vector2(worldPosition.x + offsetX, worldPosition.y + offsetY)
+			self.Shape.Size = Vector2(self.SpriteSize.x * math.abs(scaleX) * 0.7, self.SpriteSize.y * math.abs(scaleY) * 0.8)
+			self.Shape.Position = Vector2(worldPosition.x + offsetX + (0.35 * lookDirectionX), worldPosition.y + offsetY)
 			self.Shape.Angle = transformComponent.ZRotation
 		end
-		
+
 		self:AttackFast(self.Shape, nil, CollisionGroups.Player)
 	end
 
