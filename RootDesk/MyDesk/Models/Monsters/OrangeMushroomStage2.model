@@ -42,7 +42,7 @@
           "Value": {
             "$type": "MOD.Core.MODVector3, MOD.Core",
             "x": 0,
-            "y": 0.0,
+            "y": 0,
             "z": 0
           }
         },
@@ -419,7 +419,7 @@
             "$type": "MODNativeType",
             "type": "System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
           },
-          "Value": 300
+          "Value": 40
         },
         {
           "TargetType": "script.Monster",
@@ -428,7 +428,7 @@
             "$type": "MODNativeType",
             "type": "System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
           },
-          "Value": 300
+          "Value": 40
         },
         {
           "TargetType": "script.Monster",
@@ -473,7 +473,7 @@
             "$type": "MODNativeType",
             "type": "System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
           },
-          "Value": 2.0
+          "Value": 2
         },
         {
           "TargetType": "script.MonsterAttack",

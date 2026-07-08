@@ -1,0 +1,179 @@
+@Component
+script MapChunkManager extends Component
+
+	property number ChunkLength = 6.4
+
+	property number SpawnBuffer = 1.2
+
+	property number CameraHalfWidth = 6.4
+
+	property number ChunkSpawnY = 0.0
+
+	property number CleanupDistance = 12.8
+
+	@HideFromInspector
+	property any SpawnedChunks = nil
+
+	@HideFromInspector
+	property integer NextChunkIndex = 1
+
+	@HideFromInspector
+	property number NextChunkX = 12.8
+
+	@HideFromInspector
+	property boolean LoggedStart = false
+
+	@ExecSpace("ServerOnly")
+	method void OnBeginPlay()
+		-- Initializes the endless chunk window from the current map end and spawns the first stretch ahead of the player.
+		self.SpawnedChunks = {}
+		self.NextChunkIndex = 1
+		self.NextChunkX = self:GetInitialChunkX()
+
+		if self.LoggedStart == false then
+			log("[MapChunkManager] begin play at x=" .. tostring(self.NextChunkX))
+			self.LoggedStart = true
+		end
+
+		self:EnsureChunksAhead(self.NextChunkX - self.ChunkLength)
+	end
+
+	@ExecSpace("ServerOnly")
+	method void OnUpdate(number delta)
+		-- Keeps the right-side chunk window filled and removes chunks that moved too far behind.
+		local leadX = self:GetLeadPlayerX()
+		if leadX < -100000 then
+			return
+		end
+
+		self:EnsureChunksAhead(leadX)
+		self:CleanupChunks(leadX)
+	end
+
+	method number GetLeadPlayerX()
+		-- Returns the farthest-right player X position in map01.
+		local users = _UserService:GetUsersByMapName("map01")
+		if users == nil then
+			return -1000000
+		end
+
+		local leadX = -1000000
+		for _, user in ipairs(users) do
+			if isvalid(user) then
+				local x = user.TransformComponent.WorldPosition.x
+				if x > leadX then
+					leadX = x
+				end
+			end
+		end
+
+		return leadX
+	end
+
+	method void EnsureChunksAhead(number leadX)
+		-- Spawns new chunks until the lead player is comfortably inside the camera-backed range.
+		local targetX = leadX + self.CameraHalfWidth + self.SpawnBuffer
+		while self.NextChunkX <= targetX do
+			self:SpawnChunk(self.NextChunkIndex, self.NextChunkX)
+			self.NextChunkIndex = self.NextChunkIndex + 1
+			self.NextChunkX = self.NextChunkX + self.ChunkLength
+		end
+	end
+
+	method void SpawnChunk(integer index, number x)
+		-- Clones one of the prepared chunk prefabs and places it at the next X anchor.
+		local prefabName = self:GetPrefabName(index)
+		local prefab = _EntityService:GetEntityByPath("/maps/map01/" .. prefabName)
+		if isvalid(prefab) == false then
+			log_error("[MapChunkManager] missing prefab: " .. prefabName)
+			return
+		end
+
+		local map = self.Entity.CurrentMap
+		if isvalid(map) == false then
+			map = self.Entity
+		end
+		if isvalid(map) == false then
+			return
+		end
+
+		local spawned = _SpawnService:SpawnByEntity(prefab, "Chunk_" .. tostring(index), Vector3(x, self.ChunkSpawnY, 0), map, true)
+		if isvalid(spawned) == false then
+			log_error("[MapChunkManager] failed to spawn chunk " .. tostring(index))
+			return
+		end
+
+		log("[MapChunkManager] spawned " .. prefabName .. " at x=" .. tostring(x))
+
+		if self.SpawnedChunks == nil then
+			self.SpawnedChunks = {}
+		end
+		self.SpawnedChunks[index] = spawned
+	end
+
+	method void CleanupChunks(number leadX)
+		-- Destroys chunks that are safely outside the camera-backed play space.
+		if self.SpawnedChunks == nil then
+			return
+		end
+
+		for index, chunk in pairs(self.SpawnedChunks) do
+			if isvalid(chunk) == false then
+				self.SpawnedChunks[index] = nil
+			else
+				local chunkX = chunk.TransformComponent.WorldPosition.x
+				if chunkX < leadX - self.CleanupDistance then
+					_EntityService:Destroy(chunk)
+					self.SpawnedChunks[index] = nil
+				end
+			end
+		end
+	end
+
+	method string GetPrefabName(integer index)
+		-- Cycles through three foothold chunk patterns to avoid obvious repetition.
+		local pattern = ((index - 1) % 3) + 1
+		if pattern == 1 then
+			return "ChunkPrefabA"
+		end
+		if pattern == 2 then
+			return "ChunkPrefabB"
+		end
+		return "ChunkPrefabC"
+	end
+
+	method number GetInitialChunkX()
+		-- Finds the right edge of the current foothold terrain and starts the endless chunks after it.
+		local map = self.Entity.CurrentMap
+		if isvalid(map) == false then
+			map = self.Entity
+		end
+
+		local foothold = map.FootholdComponent
+		if isvalid(foothold) == false then
+			return self.ChunkLength / 2
+		end
+
+		local footholds = foothold:GetFootholdAll()
+		if footholds == nil then
+			return self.ChunkLength / 2
+		end
+
+		local rightMost = 0
+		for _, fh in ipairs(footholds) do
+			if fh ~= nil then
+				local startX = fh.StartPoint.x
+				local endX = fh.EndPoint.x
+				if startX > rightMost then
+					rightMost = startX
+				end
+				if endX > rightMost then
+					rightMost = endX
+				end
+			end
+		end
+
+		return rightMost + (self.ChunkLength / 2)
+	end
+
+end

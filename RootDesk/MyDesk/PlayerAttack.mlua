@@ -3,7 +3,7 @@ script PlayerAttack extends AttackComponent
 
 	property integer BaseDamage = 10
 
-	property integer StageDamageBonus = 0
+	property integer StageDamageBonus = 5
 
 	@HideFromInspector
 	property integer CurrentStage = 1
